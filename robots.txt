@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://berketekstil.com/sitemap.xml

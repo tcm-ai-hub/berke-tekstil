@@ -1,0 +1,42 @@
+{
+ "cleanUrls": true,
+ "trailingSlash": true,
+ "headers": [
+  {
+   "source": "/assets/media/(.*)",
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=31536000, immutable"
+    }
+   ]
+  }
+ ],
+ "redirects": [
+  {
+   "source": "/tr",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/tr/hakkimizda",
+   "destination": "/#about",
+   "permanent": true
+  },
+  {
+   "source": "/tr/hizmetlerimiz",
+   "destination": "/#services",
+   "permanent": true
+  },
+  {
+   "source": "/tr/urunler",
+   "destination": "/#products",
+   "permanent": true
+  },
+  {
+   "source": "/tr/iletisim",
+   "destination": "/#quote",
+   "permanent": true
+  }
+ ]
+}
