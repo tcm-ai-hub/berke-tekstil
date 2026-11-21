@@ -17,16 +17,7 @@ company:
 # Teklif formunun gideceği adres (ör. Formspree). Boşsa form gönderimde teşekkür mesajı gösterir ama e-posta iletmez.
 form_endpoint: ""
 
-# Girişte sırayla oynayan tekstil hikâyesi. Her satır bir sahne:
-#   type: video ya da image  ·  src: assets/media içindeki dosya  ·  key: dil dosyasındaki hero.chapters anahtarı
-# Yeni video geldiğinde dosyayı assets/media'ya koyup ilgili satırın src'sini değiştirmeniz yeterli.
-hero_clips:
-  - { key: cotton,  type: image, src: soft-cotton.jpg, seconds: 4 }
-  - { key: fiber,   type: image, src: soft-roving.jpg, seconds: 4 }
-  - { key: yarn,    type: image, src: soft-yarn.jpg,   seconds: 4 }
-  - { key: fabric,  type: video, src: fabric.mp4, poster: fabric-poster.jpg }
-  - { key: sewing,  type: video, src: stitch.mp4, poster: stitch-poster.jpg }
-  - { key: product, type: image, src: baby-muslin-hero.jpg, seconds: 4 }
+# Açılış videosu: assets/media/fabric.mp4 (kapak görseli fabric-poster.jpg). Değiştirmek için aynı adla yeni dosya yükleyin.
 
 # Ürün grupları: sıralama burada. img boşsa doku yer tutucusu görünür.
 products:

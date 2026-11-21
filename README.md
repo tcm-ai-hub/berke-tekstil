@@ -12,14 +12,9 @@ GitHub'da dosyayı açıp kalem simgesiyle düzenleyin. `main`'e kaydettiğiniz 
 | Türkçe metinler | `content/tr.yml` |
 | İngilizce metinler | `content/en.yml` |
 | Telefon, WhatsApp, e-posta, adres, yıllar | `content/site.yml` → `company` |
-| Girişte sırayla oynayan tekstil hikâyesi (video/görsel) | `content/site.yml` → `hero_clips` |
+| Açılış videosu | `assets/media/fabric.mp4` (aynı adla yeni dosya yükleyin) |
 | Ürün gruplarının sırası ve kart görselleri | `content/site.yml` → `products` |
 | Teklif formunun gideceği adres | `content/site.yml` → `form_endpoint` |
-
-### Giriş videolarını değiştirmek
-
-1. Videoyu (MP4, sessiz, 1280×720, 5–8 sn) `assets/media/` klasörüne yükleyin.
-2. `content/site.yml` → `hero_clips` içinde ilgili sahnenin `type` değerini `video`, `src` değerini dosya adı yapın.
 
 ### Almanca eklemek
 
