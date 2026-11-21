@@ -21,15 +21,12 @@ form_endpoint: ""
 #   type: video ya da image  ·  src: assets/media içindeki dosya  ·  key: dil dosyasındaki hero.chapters anahtarı
 # Yeni video geldiğinde dosyayı assets/media'ya koyup ilgili satırın src'sini değiştirmeniz yeterli.
 hero_clips:
-  # Tarla, iplik ve dokuma sahneleri geldiğinde buraya, kumaşın önüne eklenecek:
-  # - { key: cotton,  type: video, src: cotton.mp4,  poster: cotton-poster.jpg }
-  # - { key: yarn,    type: video, src: yarn.mp4,    poster: yarn-poster.jpg }
-  # - { key: weaving, type: video, src: weaving.mp4, poster: weaving-poster.jpg }
+  - { key: cotton,  type: image, src: soft-cotton.jpg, seconds: 4 }
+  - { key: fiber,   type: image, src: soft-roving.jpg, seconds: 4 }
+  - { key: yarn,    type: image, src: soft-yarn.jpg,   seconds: 4 }
   - { key: fabric,  type: video, src: fabric.mp4, poster: fabric-poster.jpg }
-  - { key: cutting, type: image, src: atelier.jpg,          seconds: 3.5 }
   - { key: sewing,  type: video, src: stitch.mp4, poster: stitch-poster.jpg }
-  - { key: product, type: image, src: towel.jpg,            seconds: 3.5 }
-  - { key: packing, type: image, src: baby-sleepsuit.jpg,   seconds: 3.5 }
+  - { key: product, type: image, src: baby-muslin-hero.jpg, seconds: 4 }
 
 # Ürün grupları: sıralama burada. img boşsa doku yer tutucusu görünür.
 products:

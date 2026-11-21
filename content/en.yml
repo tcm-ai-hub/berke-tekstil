@@ -33,9 +33,10 @@ hero:
   lead: "An idea, a sketch or a tech pack is enough. We make the sample, produce on your approval, pack it under your label and ship it."
   cta_primary: Request a sample
   cta_secondary: Explore products
-  chapters_title: From fabric to parcel
+  chapters_title: From cotton to product
   chapters:
     cotton: Cotton
+    fiber: Fibre
     yarn: Yarn
     weaving: Weaving
     fabric: Fabric

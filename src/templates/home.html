@@ -2,30 +2,30 @@
 {% from "_rfq.html" import rfq with context %}
 {% block head %}<link rel="preload" as="image" href="/assets/media/{{ S.hero_clips[0].poster or S.hero_clips[0].src }}">{% endblock %}
 {% block main %}
-<section id="top" class="hero" data-hero>
-<div class="clips" aria-hidden="true">
-{% for c in S.hero_clips %}{% if c.type == 'video' %}<video class="clip{% if loop.first %} on{% endif %}" data-type="video" src="/assets/media/{{ c.src }}"{% if c.poster %} poster="/assets/media/{{ c.poster }}"{% endif %} muted playsinline preload="{{ 'auto' if loop.first else 'metadata' }}"></video>{% else %}<img class="clip{% if loop.first %} on{% endif %}" data-type="image" data-seconds="{{ c.seconds or 3.5 }}" src="/assets/media/{{ c.src }}" alt=""{% if not loop.first %} loading="lazy"{% endif %}>{% endif %}
-{% endfor %}
-</div>
-<div class="scrim" aria-hidden="true"></div>
-<div class="wrap hero-c">
-<div class="kicker mono"><span>{{ L.hero.kicker }}</span><span>{{ L.hero.place }}</span></div>
+<section id="top" class="hero soft" data-hero>
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<p class="mono kick">{{ L.hero.kicker }}</p>
 <h1 class="serif">{{ L.hero.h1 }}<span class="dot">.</span></h1>
-<div class="g2" style="align-items:end;gap:40px;margin-top:30px">
-<div>
 <p class="sub">{{ L.hero.lead }}</p>
 <div style="display:flex;gap:12px;flex-wrap:wrap">
 <a href="#rfq" class="btn btn-red">{{ L.hero.cta_primary }}</a>
-<a href="#products" class="btn btn-line" style="color:#FFFFFF">{{ L.hero.cta_secondary }}</a>
+<a href="#products" class="btn btn-line">{{ L.hero.cta_secondary }}</a>
 </div>
+<p class="mono place">{{ L.hero.place }}</p>
 </div>
-<div>
-<div style="display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px">
-<span class="mono" style="color:#D7DAE1">{{ L.hero.chapters_title }}</span>
+<div class="hero-media">
+<div class="clips" aria-hidden="true">
+{% for c in S.hero_clips %}{% if c.type == 'video' %}<video class="clip{% if loop.first %} on{% endif %}" data-type="video" src="/assets/media/{{ c.src }}"{% if c.poster %} poster="/assets/media/{{ c.poster }}"{% endif %} muted playsinline preload="{{ 'auto' if loop.first else 'metadata' }}"></video>{% else %}<img class="clip{% if loop.first %} on{% endif %}" data-type="image" data-seconds="{{ c.seconds or 4 }}" src="/assets/media/{{ c.src }}" alt=""{% if not loop.first %} loading="lazy"{% else %} fetchpriority="high"{% endif %}>{% endif %}
+{% endfor %}
+</div>
+<div class="media-bar">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:10px">
+<span class="mono" style="color:#4A342A">{{ L.hero.chapters_title }}</span>
 <button type="button" id="hero-toggle" class="chap ctl" data-play="{{ L.ui.play }}" data-pause="{{ L.ui.pause }}">{{ L.ui.pause }}</button>
 </div>
 <div class="chaps" style="grid-template-columns:repeat({{ S.hero_clips|length }},minmax(0,1fr))">
-{% for c in S.hero_clips %}<button type="button" class="chap{% if loop.first %} on{% endif %}" data-i="{{ loop.index0 }}"><span class="chap-line"><i></i></span>0{{ loop.index }} · {{ L.hero.chapters[c.key] }}</button>{% endfor %}
+{% for c in S.hero_clips %}<button type="button" class="chap{% if loop.first %} on{% endif %}" data-i="{{ loop.index0 }}"><span class="chap-line"><i></i></span>0{{ loop.index }}<br>{{ L.hero.chapters[c.key] }}</button>{% endfor %}
 </div>
 </div>
 </div>
@@ -104,7 +104,7 @@
 <p class="mono eyebrow">{{ L.heritage.eyebrow }}</p>
 <strong class="serif">{{ S.company.founded_experience }}</strong>
 <span class="lbl">{{ L.heritage.year_caption }}</span>
-<img src="/assets/media/atelier.jpg" alt="" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:32px">
+<img src="/assets/media/soft-gauze.jpg" alt="" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;margin-top:32px">
 </div>
 <div>
 <h2 class="h2 serif" style="font-size:52px;margin-bottom:24px">{{ L.heritage.h }}</h2>
