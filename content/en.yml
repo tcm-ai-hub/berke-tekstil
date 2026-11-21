@@ -1,14 +1,14 @@
 lang: en
 meta:
-  home_title: "Berke Tekstil · Send us your design, we'll make your sample"
-  home_desc: "Private label textile manufacturing in Türkiye: home textiles, babywear, hoodies and sweatshirts, bags and pencil cases, hotel textiles. From your design to sample, from sample to shipment."
+  home_title: Berke Tekstil · Private label textile manufacturing, Türkiye
+  home_desc: 'Private label and contract textile manufacturing in Denizli, Türkiye: home textiles, babywear, hoodies and sweatshirts, bags and pencil cases, hotel and bath. From idea to sample, from fabric to finished product.'
 ui:
   skip: Skip to content
   menu: Menu
   cta: Request a sample
-  arrow: "→"
+  arrow: →
   lang_soon: in preparation
-  sent: "Thank you. We have received your request and will get back to you shortly."
+  sent: Thank you. We have received your request and will get back to you shortly.
   crumb_home: Home
   crumb_products: Products
   group: Product group
@@ -26,11 +26,14 @@ nav:
   about: About
   quality: Quality & process
   contact: Contact
+  collections: Collections
+  production: Production
+  talk: Let’s talk about your project
 hero:
-  kicker: "Home textiles · Babywear · Hoodies & sweatshirts · Bags & pencil cases · Hotel textiles"
-  place: "Denizli, Türkiye"
-  h1: "Send us your product, we'll make the sample fast"
-  lead: "Your R&D file, design, tech pack or a sample product is enough. We make the sample, produce on your approval and pack it under your label."
+  kicker: Home textiles · Babywear · Hoodies & sweatshirts · Bags & pencil cases · Hotel textiles
+  place: Denizli, Türkiye
+  h1: For your brand, from start to finish.
+  lead: From idea to sample, from fabric to finished product; we make textile collections for your brand.
   cta_primary: Request a sample
   cta_secondary: Explore products
   chapters_title: From cotton to product
@@ -44,101 +47,164 @@ hero:
     sewing: Sewing & embroidery
     product: Product
     packing: Packing
+  eyebrow: PRIVATE LABEL TEXTILE MANUFACTURING · DENİZLİ, TÜRKİYE
+  cta_collections: Explore collections
+  cta_talk: Let’s talk about your project
+  pause: Pause video
+  play: Play video
 quick:
   eyebrow: Quick sample request
-  h: "Drop your file, we'll call you right back."
-  p: "Three fields, one minute. Attach your R&D file, sketch or product photo; we'll come back with a sample plan as fast as possible."
+  h: Drop your file, we'll call you right back.
+  p: Three fields, one minute. Attach your R&D file, sketch or product photo; we'll come back with a sample plan as fast as possible.
   group: Product group
   name: Name / Company
   phone: Phone (WhatsApp)
-  file: "File (optional)"
+  file: File (optional)
   send: Start my sample
-  or: "or"
+  or: or
   wa: Send via WhatsApp
-  wa_text: "Hello, I'd like to send my product/design for a sample."
+  wa_text: Hello, I'd like to send my product/design for a sample.
 home:
   products_eyebrow: Products
-  products_h: ["From home to baby, from hoodies to pencil cases:", one production partner.]
-  products_intro: "We don't make a single product group. We produce your brand's collection at one table, on one schedule."
+  products_h:
+  - 'From home to baby, from hoodies to pencil cases:'
+  - one production partner.
+  products_intro: We don't make a single product group. We produce your brand's collection at one table, on one schedule.
   custom_h: Can't find your product here?
-  custom_p: "Send us your design or a sample product; we'll assess it together and make the sample."
+  custom_p: Send us your design or a sample product; we'll assess it together and make the sample.
   custom_cta: Send my design
 planner:
   eyebrow: Plan a sample
-  h: ["Choose what you want to make,", we'll plan the rest together.]
-  lead: "Make four quick choices and see right away what we need from you for a sample. Your choices are carried into the quote form."
+  h:
+  - Choose what you want to make,
+  - we'll plan the rest together.
+  lead: Make four quick choices and see right away what we need from you for a sample. Your choices are carried into the quote form.
   q_product: Product group
   q_decor: Finishing
   q_qty: Estimated quantity
   q_have: What do you have?
-  decor: [Embroidery, Print, Woven label, None]
-  qty: ["100 – 500", "500 – 2,000", "2,000 +", Not sure yet]
+  decor:
+  - Embroidery
+  - Print
+  - Woven label
+  - None
+  qty:
+  - 100 – 500
+  - 500 – 2,000
+  - 2,000 +
+  - Not sure yet
   have:
-    - label: Design / sketch
-      needs: [Front and back sketch or image, Measurements or size info, Colour and fabric preference]
-    - label: Tech pack
-      needs: [Tech pack (PDF), Size chart, Trim and label details]
-    - label: Sample product
-      needs: [Photos of the sample, What you want changed, Shipping the sample to us]
-    - label: Just an idea
-      needs: [Reference images, Target market and price range, Intended use]
+  - label: Design / sketch
+    needs:
+    - Front and back sketch or image
+    - Measurements or size info
+    - Colour and fabric preference
+  - label: Tech pack
+    needs:
+    - Tech pack (PDF)
+    - Size chart
+    - Trim and label details
+  - label: Sample product
+    needs:
+    - Photos of the sample
+    - What you want changed
+    - Shipping the sample to us
+  - label: Just an idea
+    needs:
+    - Reference images
+    - Target market and price range
+    - Intended use
   summary_h: Your sample request
   needs_h: What we'll ask you for
   cta: Request a sample with these details
-  fine: "Quantities and lead times depend on the product; firm details are given in the sample call."
+  fine: Quantities and lead times depend on the product; firm details are given in the sample call.
 heritage:
   eyebrow: About
-  year_caption: "in Denizli's textile industry since"
-  h: "Denizli's textile know-how, for today's brands."
+  year_caption: in Denizli's textile industry since
+  h: Denizli's textile know-how, for today's brands.
   story:
-    - "We built our experience with Denizli's leading textile companies from 1995 and brought it together under the Berke Tekstil name in 2015."
-    - "Today we manufacture for brands from design to shipment, and grow our own home textile brand, Fronte Home. That is why we know what makes a product sell."
+  - We built our experience with Denizli's leading textile companies from 1995 and brought it together under the Berke Tekstil name in 2015.
+  - Today we manufacture for brands from design to shipment, and grow our own home textile brand, Fronte Home. That is why we know what makes a product sell.
   timeline:
-    - ["1995", The start, "Production experience with Denizli's leading textile companies."]
-    - ["2015", Berke Tekstil, "Our experience under our own name; contract and private label manufacturing."]
-    - [Today, Fronte Home, "Our own home textile brand, where we test fabrics and finishes on real customers."]
-    - ["2027", "Heimtextil, Frankfurt", "We will be at the fair with our samples on 12–15 January 2027. Write to us to meet."]
+  - - '1995'
+    - The start
+    - Production experience with Denizli's leading textile companies.
+  - - '2015'
+    - Berke Tekstil
+    - Our experience under our own name; contract and private label manufacturing.
+  - - Today
+    - Fronte Home
+    - Our own home textile brand, where we test fabrics and finishes on real customers.
+  - - '2027'
+    - Heimtextil, Frankfurt
+    - We will be at the fair with our samples on 12–15 January 2027. Write to us to meet.
   cta: Meet us at the fair
 quality:
   eyebrow: Quality & process
   h: You see every step.
-  lead: "Sample approval, production progress, inspection results and shipment status are reported to you regularly."
+  lead: Sample approval, production progress, inspection results and shipment status are reported to you regularly.
   you_get: You receive
   steps:
-    - [Needs & sample, Sample photos and approval]
-    - [Fabric & trims, Materials list]
-    - [Production plan, Delivery schedule]
-    - [In-line inspections, Inspection results]
-    - [Final inspection & packing, Final inspection report]
-    - [Shipment, Dispatch and tracking details]
+  - - Needs & sample
+    - Sample photos and approval
+  - - Fabric & trims
+    - Materials list
+  - - Production plan
+    - Delivery schedule
+  - - In-line inspections
+    - Inspection results
+  - - Final inspection & packing
+    - Final inspection report
+  - - Shipment
+    - Dispatch and tracking details
   report_label: Sample client report
   report_title: Order · Hoodie series
   report_badge: Illustrative
   report_rows:
-    - [Sample approval, Done, done]
-    - [Fabric & trims, Done, done]
-    - [Production plan, Done, done]
-    - [In-line inspections, In progress, active]
-    - [Final inspection & packing, Waiting, wait]
-    - [Shipment, Waiting, wait]
+  - - Sample approval
+    - Done
+    - done
+  - - Fabric & trims
+    - Done
+    - done
+  - - Production plan
+    - Done
+    - done
+  - - In-line inspections
+    - In progress
+    - active
+  - - Final inspection & packing
+    - Waiting
+    - wait
+  - - Shipment
+    - Waiting
+    - wait
   report_h: Your order never goes dark.
-  report_p: "When a step is complete you hear from us, with photos and inspection results. On the cutting table we plan fabric to the pattern and fill the gaps with the same client's other products: less waste, lower cost."
+  report_p: 'When a step is complete you hear from us, with photos and inspection results. On the cutting table we plan fabric to the pattern and fill the gaps with the same client''s other products: less waste, lower cost.'
 sectors:
   eyebrow: Who we work with
-  h: ["From brands to hotels,", the same care.]
-  lead: "From Istanbul to Germany, we work with brands looking for a partner to make their own collection."
+  h:
+  - From brands to hotels,
+  - the same care.
+  lead: From Istanbul to Germany, we work with brands looking for a partner to make their own collection.
   items:
-    - [Home textile brands, "Bed, bath, table and decorative collections."]
-    - [Babywear brands, "Muslin, bodysuits, sleepsuits and accessories."]
-    - [Fashion & streetwear brands, "Hoodies, sweatshirts and sets."]
-    - [Hotels & hospitality, "Logo towels, bathrobes and bed linen."]
-    - [Corporate & promotional, "Bags, pencil cases and teamwear."]
-    - [E-commerce brands, "Single-unit packing, ready to ship."]
-  markets: "Istanbul · Germany · Europe · Worldwide"
+  - - Home textile brands
+    - Bed, bath, table and decorative collections.
+  - - Babywear brands
+    - Muslin, bodysuits, sleepsuits and accessories.
+  - - Fashion & streetwear brands
+    - Hoodies, sweatshirts and sets.
+  - - Hotels & hospitality
+    - Logo towels, bathrobes and bed linen.
+  - - Corporate & promotional
+    - Bags, pencil cases and teamwear.
+  - - E-commerce brands
+    - Single-unit packing, ready to ship.
+  markets: Istanbul · Germany · Europe · Worldwide
 rfq:
   eyebrow: Request a sample
   h: Send us your design.
-  p: "Whatever you have is enough: a sketch, a tech pack, a photo of a sample, or just an idea. We'll come back with a sample plan and pricing."
+  p: 'Whatever you have is enough: a sketch, a tech pack, a photo of a sample, or just an idea. We''ll come back with a sample plan and pricing.'
   title: Sample & quote form
   company: Company
   email: E-mail
@@ -148,7 +214,7 @@ rfq:
   qty: Estimated quantity
   date: Target delivery date
   file: Design file
-  file_note: "PDF, AI, JPG, PNG or ZIP. For large files you can also use WhatsApp or e-mail."
+  file_note: PDF, AI, JPG, PNG or ZIP. For large files you can also use WhatsApp or e-mail.
   note: Project notes
   send: Send sample request
   l_phone: Phone
@@ -158,99 +224,230 @@ products:
   home:
     slug: home-textiles
     name: Home Textiles
-    short: "Bed, bath, table and kitchen, and decorative products. Fabric, embroidery and finish made for your brand."
-    chips: [Bed, Bath, Table & kitchen, Decorative]
-    title: "Home Textile Manufacturer in Türkiye · Private Label · Berke Tekstil"
-    desc: "Private label home textile manufacturing in Türkiye: bed, bath, table and kitchen, and decorative products with embroidery, labels and packaging."
-    lead: "Private label manufacturing for bed, bath, table and kitchen, and decorative products. Fabric, embroidery, labels and packaging to your standard."
+    short: Bed, bath, table and kitchen, and decorative products. Fabric, embroidery and finish made for your brand.
+    chips:
+    - Bed
+    - Bath
+    - Table & kitchen
+    - Decorative
+    title: Home Textile Manufacturer in Türkiye · Private Label · Berke Tekstil
+    desc: 'Private label home textile manufacturing in Türkiye: bed, bath, table and kitchen, and decorative products with embroidery, labels and packaging.'
+    lead: Private label manufacturing for bed, bath, table and kitchen, and decorative products. Fabric, embroidery, labels and packaging to your standard.
     tiles:
-      - [Bed linen, "Duvet covers, sheets and pillowcases.", ""]
-      - [Bath, "Towels and bathrobes, embroidered or plain.", monogram.jpg]
-      - [Table & kitchen, "Tablecloths, napkins and kitchen textiles.", ""]
-      - [Decorative, "Cushions, throws and finishing pieces.", ""]
+    - - Bed linen
+      - Duvet covers, sheets and pillowcases.
+      - ''
+    - - Bath
+      - Towels and bathrobes, embroidered or plain.
+      - monogram.jpg
+    - - Table & kitchen
+      - Tablecloths, napkins and kitchen textiles.
+      - ''
+    - - Decorative
+      - Cushions, throws and finishing pieces.
+      - ''
     options:
-      - [Fabric, "Chosen for your collection, approved with a sample."]
-      - [Finishing, "Embroidery, print and woven labels; logos, monograms and borders."]
-      - [Colour & size, "To your collection palette and sizes."]
-      - [Packing & shipping, "Retail or e-commerce ready packing, partner carriers."]
+    - - Fabric
+      - Chosen for your collection, approved with a sample.
+    - - Finishing
+      - Embroidery, print and woven labels; logos, monograms and borders.
+    - - Colour & size
+      - To your collection palette and sizes.
+    - - Packing & shipping
+      - Retail or e-commerce ready packing, partner carriers.
   baby:
     slug: babywear
     name: Babywear
-    short: "From muslin swaddles to bodysuits and sleepsuits. Fabric, trims and labels chosen with your brand."
-    chips: [Muslin swaddles, Bodysuits, Sleepsuits, Accessories]
-    title: "Babywear Manufacturer in Türkiye · Private Label · Berke Tekstil"
-    desc: "Private label babywear manufacturing in Türkiye: muslin swaddles, bodysuits, sleepsuits and accessories with your own labels and packaging."
-    lead: "Collection manufacturing for babywear brands. For products worn next to the skin we choose fabric and trims with you, and deliver with clean seams and your own labels."
+    short: From muslin swaddles to bodysuits and sleepsuits. Fabric, trims and labels chosen with your brand.
+    chips:
+    - Muslin swaddles
+    - Bodysuits
+    - Sleepsuits
+    - Accessories
+    title: Babywear Manufacturer in Türkiye · Private Label · Berke Tekstil
+    desc: 'Private label babywear manufacturing in Türkiye: muslin swaddles, bodysuits, sleepsuits and accessories with your own labels and packaging.'
+    lead: Collection manufacturing for babywear brands. For products worn next to the skin we choose fabric and trims with you, and deliver with clean seams and your own labels.
     hero_img: baby-muslin-hero.jpg
     tiles:
-      - [Muslin swaddles & blankets, "Swaddles, multi-use cloths and light blankets.", baby-muslin-tile.jpg]
-      - [Bodysuits, "Everyday essentials, made to your brand's pattern.", baby-bodysuit.jpg]
-      - [Sleepsuits & pyjamas, "Sleep and loungewear collections.", baby-sleepsuit.jpg]
-      - ["Bibs, hats, accessories", "Small pieces that complete a set.", baby-accessories.jpg]
+    - - Muslin swaddles & blankets
+      - Swaddles, multi-use cloths and light blankets.
+      - baby-muslin-tile.jpg
+    - - Bodysuits
+      - Everyday essentials, made to your brand's pattern.
+      - baby-bodysuit.jpg
+    - - Sleepsuits & pyjamas
+      - Sleep and loungewear collections.
+      - baby-sleepsuit.jpg
+    - - Bibs, hats, accessories
+      - Small pieces that complete a set.
+      - baby-accessories.jpg
     care_h: What we pay attention to in babywear
     care:
-      - [Fabric, "We build your market's testing and documentation requests into the plan from the start."]
-      - [Seams, "Soft, flat seam finishes; inner label position agreed with your brand."]
-      - [Trims, "Sourcing and in-line checks of snaps, buttons and tapes."]
-      - [Embroidery, "Names, monograms and small motifs on muslin and cotton."]
+    - - Fabric
+      - We build your market's testing and documentation requests into the plan from the start.
+    - - Seams
+      - Soft, flat seam finishes; inner label position agreed with your brand.
+    - - Trims
+      - Sourcing and in-line checks of snaps, buttons and tapes.
+    - - Embroidery
+      - Names, monograms and small motifs on muslin and cotton.
     options:
-      - [Sets & gifting, "Collection sets and boxed gift packaging."]
-      - [Labels, "Brand, size and care labels."]
-      - [Colour & print, "Colour and pattern to your collection palette."]
-      - [E-commerce, "Single-unit packing, ready to ship."]
+    - - Sets & gifting
+      - Collection sets and boxed gift packaging.
+    - - Labels
+      - Brand, size and care labels.
+    - - Colour & print
+      - Colour and pattern to your collection palette.
+    - - E-commerce
+      - Single-unit packing, ready to ship.
   hoodie:
     slug: hoodies-sweatshirts
     name: Hoodies & Sweatshirts
-    short: "Hoodies, sweatshirts and sets. Fabric, rib, embroidery or print from your design."
-    chips: [Hoodies, Sweatshirts, Tracksuits, Teamwear]
-    title: "Hoodie & Sweatshirt Manufacturer in Türkiye · Private Label · Berke Tekstil"
-    desc: "Private label hoodie and sweatshirt manufacturing in Türkiye: your pattern, fabric, embroidery and print, from sample to bulk."
-    lead: "We make your brand's hoodies, sweatshirts and sets from your design. Pattern, fabric, rib, embroidery or print and labels: sample first, bulk on your approval."
+    short: Hoodies, sweatshirts and sets. Fabric, rib, embroidery or print from your design.
+    chips:
+    - Hoodies
+    - Sweatshirts
+    - Tracksuits
+    - Teamwear
+    title: Hoodie & Sweatshirt Manufacturer in Türkiye · Private Label · Berke Tekstil
+    desc: 'Private label hoodie and sweatshirt manufacturing in Türkiye: your pattern, fabric, embroidery and print, from sample to bulk.'
+    lead: 'We make your brand''s hoodies, sweatshirts and sets from your design. Pattern, fabric, rib, embroidery or print and labels: sample first, bulk on your approval.'
     tiles:
-      - [Hoodies, "Pocket or no pocket, zip-up or pullover.", ""]
-      - [Sweatshirts, "Crew neck, half-zip and oversized fits.", ""]
-      - [Tracksuits, "Top and bottom in matching fabric and colour.", ""]
-      - [Corporate & teamwear, "Logo team, event and club wear.", ""]
+    - - Hoodies
+      - Pocket or no pocket, zip-up or pullover.
+      - ''
+    - - Sweatshirts
+      - Crew neck, half-zip and oversized fits.
+      - ''
+    - - Tracksuits
+      - Top and bottom in matching fabric and colour.
+      - ''
+    - - Corporate & teamwear
+      - Logo team, event and club wear.
+      - ''
     options:
-      - [Pattern, "Your own pattern or one we develop together."]
-      - [Fabric, "Type and weight to your design, approved with a sample."]
-      - [Finishing, "Embroidery, print, patches and woven labels."]
-      - [Size set, "Graded to your size chart; checked size by size."]
-      - [Labels & packing, "Brand label, hang tag and single-unit packing."]
+    - - Pattern
+      - Your own pattern or one we develop together.
+    - - Fabric
+      - Type and weight to your design, approved with a sample.
+    - - Finishing
+      - Embroidery, print, patches and woven labels.
+    - - Size set
+      - Graded to your size chart; checked size by size.
+    - - Labels & packing
+      - Brand label, hang tag and single-unit packing.
   bags:
     slug: bags-pencil-cases
     name: Bags & Pencil Cases
-    short: "Tote bags, pencil cases and pouches; retail, school and corporate promotional series."
-    chips: [Tote bags, Pencil cases, Pouches, Promotional]
-    title: "Tote Bag & Pencil Case Manufacturer in Türkiye · Private Label · Berke Tekstil"
-    desc: "Tote bag, pencil case and pouch manufacturing in Türkiye: branded embroidery, print and labels for retail and corporate promotion."
-    lead: "We make tote bags, pencil cases and small accessory bags for your brand or organisation. Fabric, zips, embroidery or print and labels, your choice."
+    short: Tote bags, pencil cases and pouches; retail, school and corporate promotional series.
+    chips:
+    - Tote bags
+    - Pencil cases
+    - Pouches
+    - Promotional
+    title: Tote Bag & Pencil Case Manufacturer in Türkiye · Private Label · Berke Tekstil
+    desc: 'Tote bag, pencil case and pouch manufacturing in Türkiye: branded embroidery, print and labels for retail and corporate promotion.'
+    lead: We make tote bags, pencil cases and small accessory bags for your brand or organisation. Fabric, zips, embroidery or print and labels, your choice.
     tiles:
-      - [Tote bags, "Retail, store and event bags.", ""]
-      - [Pencil cases, "For school, office and stationery brands.", ""]
-      - [Pouches, "Make-up, travel and gift sets.", ""]
-      - [Corporate promotional, "Logo sets and event series.", ""]
+    - - Tote bags
+      - Retail, store and event bags.
+      - ''
+    - - Pencil cases
+      - For school, office and stationery brands.
+      - ''
+    - - Pouches
+      - Make-up, travel and gift sets.
+      - ''
+    - - Corporate promotional
+      - Logo sets and event series.
+      - ''
     options:
-      - [Fabric, "Cotton, canvas and lined options; approved with a sample."]
-      - [Zips & trims, "Sourcing of zips, handles and trims."]
-      - [Finishing, "Embroidery, print and woven labels."]
-      - [Packing, "Single-unit or set packing."]
+    - - Fabric
+      - Cotton, canvas and lined options; approved with a sample.
+    - - Zips & trims
+      - Sourcing of zips, handles and trims.
+    - - Finishing
+      - Embroidery, print and woven labels.
+    - - Packing
+      - Single-unit or set packing.
   hotel:
     slug: hotel-bath
     name: Hotel & Bath
-    short: "Towels, bathrobes and bed linen for hotels and hospitality brands, with logo embroidery."
-    chips: [Towels, Bathrobes, Bed linen, Logo embroidery]
-    title: "Hotel Textiles & Logo Towel Manufacturer · Berke Tekstil"
-    desc: "Logo towels, bathrobes and bed linen for hotels; embroidery in our own atelier, sample and bulk production."
-    lead: "Towels, bathrobes and bed linen for hotels and hospitality brands. We embroider your hotel's logo in our own atelier and move to bulk on sample approval."
+    short: Towels, bathrobes and bed linen for hotels and hospitality brands, with logo embroidery.
+    chips:
+    - Towels
+    - Bathrobes
+    - Bed linen
+    - Logo embroidery
+    title: Hotel Textiles & Logo Towel Manufacturer · Berke Tekstil
+    desc: Logo towels, bathrobes and bed linen for hotels; embroidery in our own atelier, sample and bulk production.
+    lead: Towels, bathrobes and bed linen for hotels and hospitality brands. We embroider your hotel's logo in our own atelier and move to bulk on sample approval.
     hero_img: monogram.jpg
     tiles:
-      - [Towel sets, "Hand, face, bath and pool towels.", towel.jpg]
-      - [Bathrobes, "Waffle and terry, with or without logo.", monogram.jpg]
-      - [Bed linen, "Duvet covers, sheets and pillowcases.", ""]
-      - [Logo & monogram, "Your hotel's logo in the colour of the room.", ""]
+    - - Towel sets
+      - Hand, face, bath and pool towels.
+      - towel.jpg
+    - - Bathrobes
+      - Waffle and terry, with or without logo.
+      - monogram.jpg
+    - - Bed linen
+      - Duvet covers, sheets and pillowcases.
+      - ''
+    - - Logo & monogram
+      - Your hotel's logo in the colour of the room.
+      - ''
     options:
-      - [Embroidery, "Logos, monograms and borders, in our own atelier."]
-      - [Colour & size, "To your hotel standard."]
-      - [Labels, "Hotel or supplier labels."]
-      - [Shipping, "Option to pack by room or floor."]
+    - - Embroidery
+      - Logos, monograms and borders, in our own atelier.
+    - - Colour & size
+      - To your hotel standard.
+    - - Labels
+      - Hotel or supplier labels.
+    - - Shipping
+      - Option to pack by room or floor.
+collections:
+  eyebrow: Collections
+  h: Five product groups, one production partner.
+  intro: From home textiles to babywear, from hoodies to pencil cases. Each group with its own fabric, pattern and finish; all at one table, on one schedule.
+  more: View collection
+  custom: A product that isn’t listed? Send us your design.
+craft:
+  eyebrow: Production
+  h: Quality shows in the details.
+  intro: From fabric choice to the last stitch, we approve every step with a sample and carry the same standard into bulk.
+  items:
+  - - Fabric
+    - Chosen for your collection, approved with a sample.
+  - - Embroidery
+    - Logos, monograms and borders, stitched in our own atelier.
+  - - Stitching & detail
+    - The approved sample’s standard, in every piece.
+  - - Finished product
+    - Under your label, ready to ship.
+process:
+  eyebrow: Process
+  h: From idea to shipment in five steps.
+  lead: When a step is complete you hear from us, with photos and inspection results. When you have a question, you have one contact.
+  you_get: You receive
+  steps:
+  - - Design / idea
+    - Your R&D file, sketch, tech pack or a sample product. We choose fabric and trims together.
+    - Materials list
+  - - Sample
+    - See it, touch it and try it before approval.
+    - Sample photos and approval
+  - - Production
+    - To the approved sample’s standard, on the planned schedule.
+    - Delivery schedule
+  - - Quality control
+    - In-line and final checks; problems are solved before they reach your warehouse.
+    - Inspection results
+  - - Packing & shipment
+    - Labels, packing and cartons to your procedure; shipped with partner carriers.
+    - Dispatch and tracking details
+about_extra:
+  markets: From Istanbul to Germany, we work with brands looking for a partner to make their own collection.
+request:
+  eyebrow: Project request
+  h: Let’s talk about your project.
+  lead: Choose what you want to make and see right away what we need for a sample. Your choices are carried into the form.

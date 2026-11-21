@@ -12,58 +12,35 @@
     nav.addEventListener("click", function (e) { if (e.target.tagName === "A") { nav.classList.remove("open"); mb.setAttribute("aria-expanded", "false"); } });
   }
 
-  // hero: sequence of clips (video or image) with chapter bar
-  var hero = $("[data-hero]");
-  if (hero) {
-    var clips = $$(".clip", hero), chaps = $$(".chap[data-i]", hero), toggle = $("#hero-toggle");
-    var cur = 0, paused = reduce, t0 = 0, elapsed = 0, raf = null;
-    var dur = function (c) { return c.dataset.type === "video" ? (c.duration || 6) : parseFloat(c.dataset.seconds || 3.5); };
-    var pos = function (c) { return c.dataset.type === "video" ? c.currentTime : elapsed; };
-    function show(i) {
-      clips.forEach(function (c, j) {
-        var on = j === i;
-        c.classList.toggle("on", on);
-        if (c.dataset.type === "video") { if (on) { c.currentTime = 0; if (!paused) play(c); } else c.pause(); }
-        else if (on) { c.style.animation = "none"; void c.offsetWidth; c.style.animation = ""; }
-      });
-      cur = i; elapsed = 0; t0 = performance.now();
-      chaps.forEach(function (b, j) { b.classList.toggle("on", j === i); });
-    }
-    function tick(now) {
-      var c = clips[cur];
-      if (!paused && c.dataset.type !== "video") elapsed += (now - t0) / 1000;
-      t0 = now;
-      var p = Math.min(1, pos(c) / dur(c));
-      chaps.forEach(function (b, j) { b.querySelector("i").style.width = (j < cur ? 100 : j === cur ? p * 100 : 0).toFixed(1) + "%"; });
-      if (!paused && (p >= 1 || (c.dataset.type === "video" && c.ended))) show((cur + 1) % clips.length);
-      raf = requestAnimationFrame(tick);
-    }
-    clips.forEach(function (c) { if (c.dataset.type === "video") c.addEventListener("ended", function () { if (!paused) show((cur + 1) % clips.length); }); });
-    chaps.forEach(function (b) { b.addEventListener("click", function () { show(+b.dataset.i); }); });
-    function setLabel() { if (toggle) toggle.textContent = paused ? toggle.dataset.play : toggle.dataset.pause; }
-    if (toggle) toggle.addEventListener("click", function () {
-      paused = !paused; var c = clips[cur];
-      if (c.dataset.type === "video") { if (paused) c.pause(); else play(c); }
-      setLabel();
-    });
-    show(0); setLabel(); raf = requestAnimationFrame(tick);
-    document.addEventListener("visibilitychange", function () { if (document.hidden) cancelAnimationFrame(raf); else { t0 = performance.now(); raf = requestAnimationFrame(tick); } });
+  // hero video with pause control; honours reduced motion
+  var hv = $("#hero-video"), ht = $("#hero-toggle");
+  if (hv) {
+    if (!reduce) play(hv);
+    var label = function () { if (ht) ht.textContent = hv.paused ? ht.dataset.play : ht.dataset.pause; };
+    hv.addEventListener("play", label); hv.addEventListener("pause", label); label();
+    if (ht) ht.addEventListener("click", function () { if (hv.paused) play(hv); else hv.pause(); });
   }
 
-  // other looping videos
-  $$("video[data-loop]").forEach(function (v) { if (reduce) v.pause(); else play(v); });
+  // other looping videos: play only while visible
+  var loops = $$("video[data-loop]");
+  if (!reduce && loops.length) {
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) play(e.target); else e.target.pause(); }); }, { threshold: 0.25 });
+      loops.forEach(function (v) { io.observe(v); });
+    } else loops.forEach(play);
+  }
 
-  // sample planner
+  // sample planner → fills the quote form
   var pl = $("[data-planner]");
   if (pl) {
     var needs = [];
     try { needs = JSON.parse(pl.dataset.needs); } catch (e) {}
     var val = function (q) { var i = $("fieldset[data-q='" + q + "'] input:checked", pl); return i ? { v: i.value, l: i.dataset.label } : { v: "", l: "" }; };
-    function render() {
+    var render = function () {
       ["product", "decor", "qty", "have"].forEach(function (q) { $("[data-out='" + q + "']", pl).textContent = val(q).l; });
       var list = $("[data-out='needs']", pl); list.innerHTML = "";
       (needs[+val("have").v] || []).forEach(function (n) { var li = document.createElement("li"); li.textContent = n; list.appendChild(li); });
-    }
+    };
     pl.addEventListener("change", render); render();
     var go = $("[data-planner-go]", pl);
     if (go) go.addEventListener("click", function () {

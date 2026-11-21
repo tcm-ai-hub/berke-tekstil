@@ -1,173 +1,135 @@
 {% extends "base.html" %}
 {% from "_rfq.html" import rfq with context %}
-{% block head %}<link rel="preload" as="image" href="/assets/media/{{ S.hero_clips[0].poster or S.hero_clips[0].src }}">{% endblock %}
+{% block head %}<link rel="preload" as="image" href="/assets/media/fabric-poster.jpg">{% endblock %}
 {% block main %}
-<section id="top" class="hero soft" data-hero>
+<section id="top" class="hero">
 <div class="wrap hero-grid">
 <div class="hero-copy">
-<p class="mono kick">{{ L.hero.kicker }}</p>
-<h1 class="serif">{{ L.hero.h1 }}<span class="dot">.</span></h1>
-<p class="sub">{{ L.hero.lead }}</p>
-<div style="display:flex;gap:12px;flex-wrap:wrap">
-<a href="#rfq" class="btn btn-red">{{ L.hero.cta_primary }}</a>
-<a href="#products" class="btn btn-line">{{ L.hero.cta_secondary }}</a>
-</div>
-<p class="mono place">{{ L.hero.place }}</p>
-</div>
-<div class="hero-media">
-<div class="clips" aria-hidden="true">
-{% for c in S.hero_clips %}{% if c.type == 'video' %}<video class="clip{% if loop.first %} on{% endif %}" data-type="video" src="/assets/media/{{ c.src }}"{% if c.poster %} poster="/assets/media/{{ c.poster }}"{% endif %} muted playsinline preload="{{ 'auto' if loop.first else 'metadata' }}"></video>{% else %}<img class="clip{% if loop.first %} on{% endif %}" data-type="image" data-seconds="{{ c.seconds or 4 }}" src="/assets/media/{{ c.src }}" alt=""{% if not loop.first %} loading="lazy"{% else %} fetchpriority="high"{% endif %}>{% endif %}
-{% endfor %}
-</div>
-<div class="media-bar">
-<div style="display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:10px">
-<span class="mono" style="color:#4A342A">{{ L.hero.chapters_title }}</span>
-<button type="button" id="hero-toggle" class="chap ctl" data-play="{{ L.ui.play }}" data-pause="{{ L.ui.pause }}">{{ L.ui.pause }}</button>
-</div>
-<div class="chaps" style="grid-template-columns:repeat({{ S.hero_clips|length }},minmax(0,1fr))">
-{% for c in S.hero_clips %}<button type="button" class="chap{% if loop.first %} on{% endif %}" data-i="{{ loop.index0 }}"><span class="chap-line"><i></i></span>0{{ loop.index }}<br>{{ L.hero.chapters[c.key] }}</button>{% endfor %}
+<p class="eyebrow caps">{{ L.hero.eyebrow }}</p>
+<h1 class="serif">{{ L.hero.h1 }}</h1>
+<p class="lead">{{ L.hero.lead }}</p>
+<div class="actions">
+<a href="#products" class="btn btn-ink">{{ L.hero.cta_collections }}</a>
+<a href="#rfq" class="u">{{ L.hero.cta_talk }}</a>
 </div>
 </div>
-</div>
+<figure class="hero-media">
+<video id="hero-video" src="/assets/media/fabric.mp4" poster="/assets/media/fabric-poster.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+<button type="button" id="hero-toggle" class="vid-ctl" data-play="{{ L.hero.play }}" data-pause="{{ L.hero.pause }}">{{ L.hero.pause }}</button>
+</figure>
 </div>
 </section>
 
-<section class="quick" id="quick">
-<div class="wrap quick-grid">
-<div>
-<p class="mono" style="margin:0 0 12px;color:#E9C9D3">{{ L.quick.eyebrow }}</p>
-<h2 class="serif" style="margin:0 0 12px;font-size:40px;line-height:1.05;color:#FFFFFF">{{ L.quick.h }}</h2>
-<p style="margin:0;font-size:16px;line-height:1.55;color:#C9CEDA;max-width:460px">{{ L.quick.p }}</p>
-</div>
-<form class="quick-form form-lite" action="{{ S.form_endpoint or '#' }}" method="post" enctype="multipart/form-data">
-<input type="hidden" name="source" value="quick">
-<div class="qf"><label for="q-pg" class="lbl">{{ L.quick.group }}</label><select id="q-pg" name="product_group">{% for p in S.products %}<option value="{{ p.key }}">{{ L.products[p.key].name }}</option>{% endfor %}<option value="other">{{ L.rfq.other }}</option></select></div>
-<div class="qf"><label for="q-nm" class="lbl">{{ L.quick.name }}</label><input id="q-nm" name="name" type="text" autocomplete="organization" required></div>
-<div class="qf"><label for="q-ph" class="lbl">{{ L.quick.phone }}</label><input id="q-ph" name="phone" type="tel" autocomplete="tel" required></div>
-<div class="qf"><label for="q-fl" class="lbl">{{ L.quick.file }}</label><input id="q-fl" name="design_file" type="file" accept=".pdf,.ai,.jpg,.jpeg,.png,.zip"></div>
-<div class="qf-actions">
-<button type="submit" class="btn btn-red">{{ L.quick.send }} {{ L.ui.arrow }}</button>
-<span class="lbl" style="color:#8F97A8">{{ L.quick.or }}</span>
-<a class="wa" href="https://wa.me/{{ S.company.whatsapp }}?text={{ L.quick.wa_text|urlencode }}">{{ L.quick.wa }}</a>
-</div>
-<p class="form-ok" role="status">{{ L.ui.sent }}</p>
-</form>
-</div>
-</section>
-
-<section id="products" class="wrap sec">
-<div class="g2" style="align-items:end;margin-bottom:48px">
-<div><p class="mono eyebrow">{{ L.home.products_eyebrow }}</p><h2 class="h2 serif">{{ L.home.products_h[0] }} <em>{{ L.home.products_h[1] }}</em></h2></div>
-<p class="lead">{{ L.home.products_intro }}</p>
-</div>
-<div class="g3">
-{% for p in S.products %}{% set P = L.products[p.key] %}
-<a href="{{ purl(lang, p.key) }}" class="pcard">
-{% if p.img %}<img class="media" src="/assets/media/{{ p.img }}" alt="{{ P.name }}" loading="lazy">{% else %}<div class="muslin media"><span class="ph">{{ P.name }}</span></div>{% endif %}
-<div class="body">
-<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><h3 class="serif">{{ P.name }}</h3><span class="mono" style="color:#4A342A">0{{ loop.index }}</span></div>
-<p class="lead" style="font-size:15px">{{ P.short }}</p>
-<div class="chips">{% for c in P.chips %}<span class="chipx">{{ c }}</span>{% endfor %}</div>
-<span class="more">{{ P.name }} {{ L.ui.arrow }}</span>
-</div>
-</a>
-{% endfor %}
-<a href="#rfq" class="pcard custom">
-<div class="body" style="height:100%;justify-content:space-between">
-<span class="mono" style="color:#E9C9D3">0{{ S.products|length + 1 }}</span>
-<div><h3 class="serif" style="color:#FFFFFF">{{ L.home.custom_h }}</h3><p style="margin:14px 0 0;font-size:16px;line-height:1.55;color:#C9CEDA">{{ L.home.custom_p }}</p></div>
-<span class="btn btn-red" style="align-self:flex-start">{{ L.home.custom_cta }} {{ L.ui.arrow }}</span>
-</div>
-</a>
-</div>
-</section>
-
-<section id="planner" class="sec cream">
+<section id="products" class="sec">
 <div class="wrap">
-<p class="mono eyebrow">{{ L.planner.eyebrow }}</p>
-<div class="g2" style="align-items:end;margin-bottom:44px">
-<h2 class="h2 serif">{{ L.planner.h[0] }} <em>{{ L.planner.h[1] }}</em></h2>
+<div class="sec-head">
+<p class="eyebrow">{{ L.collections.eyebrow }}</p>
+<h2 class="h2 serif">{{ L.collections.h }}</h2>
+<p class="lead">{{ L.collections.intro }}</p>
+</div>
+<div class="coll">
+{% for p in S.products %}{% set P = L.products[p.key] %}
+<a href="{{ purl(lang, p.key) }}" class="ci ci-{{ loop.index }}">
+{% if p.img %}<img src="/assets/media/{{ p.img }}" alt="{{ P.name }}" loading="lazy">{% else %}<span class="type-tile"><span class="serif">{{ P.name }}</span></span>{% endif %}
+<span class="ci-cap"><span class="n">0{{ loop.index }}</span><span class="t serif">{{ P.name }}</span><span class="d">{{ P.short }}</span><span class="u">{{ L.collections.more }}</span></span>
+</a>
+{% endfor %}
+</div>
+<p class="coll-foot"><a class="u" href="#rfq">{{ L.collections.custom }}</a></p>
+</div>
+</section>
+
+<section id="craft" class="sec paper2">
+<div class="wrap">
+<div class="sec-head">
+<p class="eyebrow">{{ L.craft.eyebrow }}</p>
+<h2 class="h2 serif">{{ L.craft.h }}</h2>
+<p class="lead">{{ L.craft.intro }}</p>
+</div>
+{% set ci = L.craft['items'] %}
+<div class="craft">
+<figure class="cr cr-1"><img src="/assets/media/fabric-poster.jpg" alt="{{ ci[0][0] }}" loading="lazy"><figcaption><b>{{ ci[0][0] }}</b>{{ ci[0][1] }}</figcaption></figure>
+<figure class="cr cr-2"><video data-loop src="/assets/media/stitch.mp4" poster="/assets/media/stitch-poster.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video><figcaption><b>{{ ci[1][0] }}</b>{{ ci[1][1] }}</figcaption></figure>
+<figure class="cr cr-3"><img src="/assets/media/monogram.jpg" alt="{{ ci[2][0] }}" loading="lazy"><figcaption><b>{{ ci[2][0] }}</b>{{ ci[2][1] }}</figcaption></figure>
+<figure class="cr cr-4"><img src="/assets/media/towel.jpg" alt="{{ ci[3][0] }}" loading="lazy"><figcaption><b>{{ ci[3][0] }}</b>{{ ci[3][1] }}</figcaption></figure>
+</div>
+</div>
+</section>
+
+<section id="quality" class="sec">
+<div class="wrap">
+<div class="sec-head">
+<p class="eyebrow">{{ L.process.eyebrow }}</p>
+<h2 class="h2 serif">{{ L.process.h }}</h2>
+<p class="lead">{{ L.process.lead }}</p>
+</div>
+<ol class="process">
+{% for t, d, g in L.process.steps %}<li><span class="n serif">{{ loop.index }}</span><h3>{{ t }}</h3><p>{{ d }}</p><p class="get"><span>{{ L.process.you_get }}</span>{{ g }}</p></li>{% endfor %}
+</ol>
+<div class="report-row">
+<div class="report">
+<div class="rep-head"><div><span class="small muted">{{ L.quality.report_label }}</span><b>{{ L.quality.report_title }}</b></div><span class="badge">{{ L.quality.report_badge }}</span></div>
+{% for k, v, s in L.quality.report_rows %}<div class="row"><span>{{ k }}</span><span class="st st-{{ s }}">{{ v }}</span></div>{% endfor %}
+<div class="rbar"><i></i></div>
+</div>
+<div>
+<h3 class="serif" style="margin:0 0 14px;font-size:32px;line-height:1.12;font-weight:400">{{ L.quality.report_h }}</h3>
+<p class="lead">{{ L.quality.report_p }}</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about" class="sec paper2">
+<div class="wrap about">
+<div class="about-year"><span class="serif">{{ S.company.founded_experience }}</span><p class="small muted">{{ L.heritage.year_caption }}</p></div>
+<div>
+<p class="eyebrow">{{ L.heritage.eyebrow }}</p>
+<h2 class="h2 serif">{{ L.heritage.h }}</h2>
+{% for s in L.heritage.story %}<p class="lead">{{ s }}</p>{% endfor %}
+<p class="lead">{{ L.about_extra.markets }}</p>
+<ol class="tline">{% for y, h, p in L.heritage.timeline %}<li><span class="y serif">{{ y }}</span><div><b>{{ h }}</b><p>{{ p }}</p></div></li>{% endfor %}</ol>
+</div>
+</div>
+</section>
+
+<section id="planner" class="sec">
+<div class="wrap">
+<div class="sec-head">
+<p class="eyebrow">{{ L.request.eyebrow }}</p>
+<h2 class="h2 serif">{{ L.planner.h[0] }} {{ L.planner.h[1] }}</h2>
 <p class="lead">{{ L.planner.lead }}</p>
 </div>
 <div class="planner" data-planner data-needs='{{ needs_json }}'>
 <div class="pl-ctrl">
-<fieldset class="pick" data-q="product"><legend class="lbl">01 · {{ L.planner.q_product }}</legend>
+<fieldset class="pick" data-q="product"><legend>{{ L.planner.q_product }}</legend>
 {% for p in S.products %}<label><input type="radio" name="pl-product" value="{{ p.key }}" data-label="{{ L.products[p.key].name }}"{% if loop.first %} checked{% endif %}><span>{{ L.products[p.key].name }}</span></label>{% endfor %}
 </fieldset>
-<fieldset class="pick" data-q="decor"><legend class="lbl">02 · {{ L.planner.q_decor }}</legend>
+<fieldset class="pick" data-q="decor"><legend>{{ L.planner.q_decor }}</legend>
 {% for d in L.planner.decor %}<label><input type="radio" name="pl-decor" value="{{ d }}" data-label="{{ d }}"{% if loop.first %} checked{% endif %}><span>{{ d }}</span></label>{% endfor %}
 </fieldset>
-<fieldset class="pick" data-q="qty"><legend class="lbl">03 · {{ L.planner.q_qty }}</legend>
+<fieldset class="pick" data-q="qty"><legend>{{ L.planner.q_qty }}</legend>
 {% for q in L.planner.qty %}<label><input type="radio" name="pl-qty" value="{{ q }}" data-label="{{ q }}"{% if loop.first %} checked{% endif %}><span>{{ q }}</span></label>{% endfor %}
 </fieldset>
-<fieldset class="pick" data-q="have"><legend class="lbl">04 · {{ L.planner.q_have }}</legend>
+<fieldset class="pick" data-q="have"><legend>{{ L.planner.q_have }}</legend>
 {% for h in L.planner.have %}<label><input type="radio" name="pl-have" value="{{ loop.index0 }}" data-label="{{ h.label }}"{% if loop.first %} checked{% endif %}><span>{{ h.label }}</span></label>{% endfor %}
 </fieldset>
 </div>
 <aside class="pl-card" aria-live="polite">
-<div class="lbl" style="color:#E9C9D3">{{ L.planner.summary_h }}</div>
+<p class="small muted" style="margin:0">{{ L.planner.summary_h }}</p>
 <dl class="pl-sum">
 <div><dt>{{ L.planner.q_product }}</dt><dd data-out="product"></dd></div>
 <div><dt>{{ L.planner.q_decor }}</dt><dd data-out="decor"></dd></div>
 <div><dt>{{ L.planner.q_qty }}</dt><dd data-out="qty"></dd></div>
 <div><dt>{{ L.planner.q_have }}</dt><dd data-out="have"></dd></div>
 </dl>
-<div class="lbl" style="color:#AEB5C4;margin-top:22px">{{ L.planner.needs_h }}</div>
+<p class="small muted" style="margin:22px 0 0">{{ L.planner.needs_h }}</p>
 <ul class="pl-needs" data-out="needs"></ul>
-<a href="#rfq" class="btn btn-red" data-planner-go style="margin-top:22px">{{ L.planner.cta }} {{ L.ui.arrow }}</a>
+<a href="#rfq" class="btn btn-red" data-planner-go>{{ L.planner.cta }}</a>
 <p class="fine">{{ L.planner.fine }}</p>
 </aside>
 </div>
 </div>
-</section>
-
-<section id="about" class="wrap sec heritage">
-<div class="her-grid">
-<div class="her-year">
-<p class="mono eyebrow">{{ L.heritage.eyebrow }}</p>
-<strong class="serif">{{ S.company.founded_experience }}</strong>
-<span class="lbl">{{ L.heritage.year_caption }}</span>
-<img src="/assets/media/soft-gauze.jpg" alt="" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;margin-top:32px">
-</div>
-<div>
-<h2 class="h2 serif" style="font-size:52px;margin-bottom:24px">{{ L.heritage.h }}</h2>
-{% for s in L.heritage.story %}<p class="lead" style="font-size:17px;margin-bottom:14px">{{ s }}</p>{% endfor %}
-<ol class="tline">{% for y, h, p in L.heritage.timeline %}<li><span class="serif y">{{ y }}</span><b>{{ h }}</b><p>{{ p }}</p></li>{% endfor %}</ol>
-<a href="#rfq" class="btn btn-line" style="margin-top:28px">{{ L.heritage.cta }} {{ L.ui.arrow }}</a>
-</div>
-</div>
-</section>
-
-<section id="quality" class="sec cream"><div class="wrap">
-<div class="g2" style="align-items:end;margin-bottom:56px">
-<div><p class="mono eyebrow">{{ L.quality.eyebrow }}</p><h2 class="h2 serif">{{ L.quality.h }}</h2></div>
-<p class="lead">{{ L.quality.lead }}</p>
-</div>
-<div class="g6 steps">{% for t, g in L.quality.steps %}<div class="step"><div class="mono" style="color:#6E263D">0{{ loop.index }}</div><div class="t">{{ t }}</div><div class="lbl" style="margin-top:12px">{{ L.quality.you_get }}</div><p>{{ g }}</p></div>{% endfor %}</div>
-<div class="g2" style="margin-top:56px;gap:40px;align-items:center">
-<div class="report" style="background:#FFFFFF">
-<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px">
-<div><div class="lbl">{{ L.quality.report_label }}</div><div style="font-size:20px;font-weight:700;margin-top:4px">{{ L.quality.report_title }}</div></div>
-<span class="mono badge">{{ L.quality.report_badge }}</span>
-</div>
-{% for k, v, s in L.quality.report_rows %}<div class="row"><span>{{ k }}</span><span class="mono st-{{ s }}">{{ v }}</span></div>{% endfor %}
-<div class="bar"><i></i></div>
-</div>
-<div>
-<h3 class="serif" style="margin:0 0 14px;font-size:34px;line-height:1.1">{{ L.quality.report_h }}</h3>
-<p class="lead" style="font-size:17px;margin-bottom:24px">{{ L.quality.report_p }}</p>
-<a href="#rfq" class="btn btn-red">{{ L.ui.cta }}</a>
-</div>
-</div>
-</div></section>
-
-<section class="wrap sec" id="sectors">
-<div class="g2" style="align-items:end;margin-bottom:44px">
-<div><p class="mono eyebrow">{{ L.sectors.eyebrow }}</p><h2 class="h2 serif">{{ L.sectors.h[0] }} <em>{{ L.sectors.h[1] }}</em></h2></div>
-<p class="lead">{{ L.sectors.lead }}</p>
-</div>
-<ol class="sectors">{% for h, p in L.sectors['items'] %}<li><span class="mono">0{{ loop.index }}</span><b>{{ h }}</b><p>{{ p }}</p></li>{% endfor %}</ol>
-<p class="mono markets">{{ L.sectors.markets }}</p>
 </section>
 
 {{ rfq() }}

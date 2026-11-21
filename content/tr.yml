@@ -1,14 +1,14 @@
 lang: tr
 meta:
-  home_title: "Berke Tekstil · Tasarımınızı gönderin, numunenizi yapalım"
-  home_desc: "Türkiye'de private label tekstil üretimi: ev tekstili, bebek giyim, hoodie ve sweatshirt, çanta ve kalemlik, otel tekstili. Tasarımınızdan numuneye, numuneden sevkiyata."
+  home_title: Berke Tekstil · Private label tekstil üretimi, Denizli
+  home_desc: 'Denizli’de private label ve fason tekstil üretimi: ev tekstili, bebek giyim, hoodie ve sweatshirt, çanta ve kalemlik, otel ve banyo. Fikirden numuneye, kumaştan bitmiş ürüne.'
 ui:
   skip: İçeriğe geç
   menu: Menü
   cta: Numune iste
-  arrow: "→"
+  arrow: →
   lang_soon: hazırlanıyor
-  sent: "Teşekkürler. Talebiniz bize ulaştı; en kısa sürede dönüş yapacağız."
+  sent: Teşekkürler. Talebiniz bize ulaştı; en kısa sürede dönüş yapacağız.
   crumb_home: Ana Sayfa
   crumb_products: Ürünler
   group: Ürün grubu
@@ -26,11 +26,14 @@ nav:
   about: Hakkımızda
   quality: Kalite ve süreç
   contact: İletişim
+  collections: Koleksiyonlar
+  production: Üretim
+  talk: Projenizi konuşalım
 hero:
-  kicker: "Ev tekstili · Bebek giyim · Hoodie & sweatshirt · Çanta & kalemlik · Otel tekstili"
-  place: "Denizli, Türkiye"
-  h1: "Ürününüzü gönderin, numunesini en hızlı sürede yapalım"
-  lead: "Ar-Ge dosyanız, tasarımınız, teknik föyünüz ya da elinizdeki örnek ürün yeterli. Numunesini çıkarır, onayınızla üretir, markanızın etiketiyle paketleriz."
+  kicker: Ev tekstili · Bebek giyim · Hoodie & sweatshirt · Çanta & kalemlik · Otel tekstili
+  place: Denizli, Türkiye
+  h1: Markanız için, baştan sona.
+  lead: Fikirden numuneye, kumaştan bitmiş ürüne; markanız için tekstil koleksiyonları üretiyoruz.
   cta_primary: Numune iste
   cta_secondary: Ürünleri keşfet
   chapters_title: Pamuktan ürüne
@@ -44,101 +47,164 @@ hero:
     sewing: Dikim ve nakış
     product: Ürün
     packing: Paket
+  eyebrow: PRIVATE LABEL TEXTILE MANUFACTURING · DENİZLİ, TÜRKİYE
+  cta_collections: Koleksiyonları keşfet
+  cta_talk: Projenizi konuşalım
+  pause: Videoyu durdur
+  play: Videoyu oynat
 quick:
   eyebrow: Hızlı numune talebi
-  h: "Dosyanızı bırakın, sizi hemen arayalım."
-  p: "Üç alan, bir dakika. Ar-Ge dosyanızı, çiziminizi ya da ürün fotoğrafınızı ekleyin; numune planı için en kısa sürede dönüş yapalım."
+  h: Dosyanızı bırakın, sizi hemen arayalım.
+  p: Üç alan, bir dakika. Ar-Ge dosyanızı, çiziminizi ya da ürün fotoğrafınızı ekleyin; numune planı için en kısa sürede dönüş yapalım.
   group: Ürün grubu
   name: Ad / Firma
   phone: Telefon (WhatsApp)
-  file: "Dosya (isteğe bağlı)"
+  file: Dosya (isteğe bağlı)
   send: Numunemi başlat
-  or: "ya da"
+  or: ya da
   wa: WhatsApp'tan gönder
-  wa_text: "Merhaba, numune için ürünümü/tasarımımı göndermek istiyorum."
+  wa_text: Merhaba, numune için ürünümü/tasarımımı göndermek istiyorum.
 home:
   products_eyebrow: Ürünler
-  products_h: ["Evden bebeğe, hoodie'den kalemliğe:", tek üretim ortağı.]
-  products_intro: "Tek bir ürün grubu yapmıyoruz. Markanızın koleksiyonunu aynı masada, aynı takvimle üretiyoruz."
+  products_h:
+  - 'Evden bebeğe, hoodie''den kalemliğe:'
+  - tek üretim ortağı.
+  products_intro: Tek bir ürün grubu yapmıyoruz. Markanızın koleksiyonunu aynı masada, aynı takvimle üretiyoruz.
   custom_h: Aradığınız ürün listede yok mu?
-  custom_p: "Tasarımınızı ya da örnek ürününüzü gönderin; üretilebilirliğini birlikte değerlendirip numunesini çıkaralım."
+  custom_p: Tasarımınızı ya da örnek ürününüzü gönderin; üretilebilirliğini birlikte değerlendirip numunesini çıkaralım.
   custom_cta: Tasarımımı göndereyim
 planner:
   eyebrow: Numune planla
-  h: ["Ne üretmek istediğinizi seçin,", gerisini birlikte planlayalım.]
-  lead: "Dört kısa seçim yapın; numune için sizden neye ihtiyacımız olduğunu hemen görün. Seçimleriniz teklif formuna otomatik aktarılır."
+  h:
+  - Ne üretmek istediğinizi seçin,
+  - gerisini birlikte planlayalım.
+  lead: Dört kısa seçim yapın; numune için sizden neye ihtiyacımız olduğunu hemen görün. Seçimleriniz teklif formuna otomatik aktarılır.
   q_product: Ürün grubu
   q_decor: Uygulama
   q_qty: Tahmini adet
   q_have: Elinizde ne var?
-  decor: [Nakış, Baskı, Dokuma etiket, Uygulama yok]
-  qty: ["100 – 500", "500 – 2.000", "2.000 +", Henüz bilmiyorum]
+  decor:
+  - Nakış
+  - Baskı
+  - Dokuma etiket
+  - Uygulama yok
+  qty:
+  - 100 – 500
+  - 500 – 2.000
+  - 2.000 +
+  - Henüz bilmiyorum
   have:
-    - label: Tasarım / çizim
-      needs: [Ön ve arka çizim ya da görsel, Ölçü ya da beden bilgisi, Renk ve kumaş tercihi]
-    - label: Teknik föy
-      needs: [Teknik föy (PDF), Beden tablosu, Aksesuar ve etiket detayları]
-    - label: Örnek ürün
-      needs: [Örnek ürünün fotoğrafları, Değişmesini istediğiniz noktalar, Örneği kargoyla gönderme bilgisi]
-    - label: Sadece fikir
-      needs: [Referans görseller, Hedef pazar ve fiyat aralığı, Kullanım amacı]
+  - label: Tasarım / çizim
+    needs:
+    - Ön ve arka çizim ya da görsel
+    - Ölçü ya da beden bilgisi
+    - Renk ve kumaş tercihi
+  - label: Teknik föy
+    needs:
+    - Teknik föy (PDF)
+    - Beden tablosu
+    - Aksesuar ve etiket detayları
+  - label: Örnek ürün
+    needs:
+    - Örnek ürünün fotoğrafları
+    - Değişmesini istediğiniz noktalar
+    - Örneği kargoyla gönderme bilgisi
+  - label: Sadece fikir
+    needs:
+    - Referans görseller
+    - Hedef pazar ve fiyat aralığı
+    - Kullanım amacı
   summary_h: Numune talebiniz
   needs_h: Bizden istenecekler
   cta: Bu bilgilerle numune iste
-  fine: "Adet ve süreler ürüne göre değişir; kesin bilgi numune görüşmesinde verilir."
+  fine: Adet ve süreler ürüne göre değişir; kesin bilgi numune görüşmesinde verilir.
 heritage:
   eyebrow: Hakkımızda
-  year_caption: "yılından beri Denizli tekstilinde"
+  year_caption: yılından beri Denizli tekstilinde
   h: Denizli'nin tekstil birikimi, bugünün markaları için.
   story:
-    - "Deneyimimizi 1995'ten bu yana Denizli'nin öncü tekstil firmalarında edindik; 2015'te Berke Tekstil adı altında birleştirdik."
-    - "Bugün markalar için tasarımdan sevkiyata üretim yapıyor, kendi ev tekstili markamız Fronte Home'u da büyütüyoruz. Bir ürünü neyin sattırdığını bu yüzden biliyoruz."
+  - Deneyimimizi 1995'ten bu yana Denizli'nin öncü tekstil firmalarında edindik; 2015'te Berke Tekstil adı altında birleştirdik.
+  - Bugün markalar için tasarımdan sevkiyata üretim yapıyor, kendi ev tekstili markamız Fronte Home'u da büyütüyoruz. Bir ürünü neyin sattırdığını bu yüzden biliyoruz.
   timeline:
-    - ["1995", Başlangıç, "Denizli'nin öncü tekstil firmalarında üretim deneyimi."]
-    - ["2015", Berke Tekstil, "Deneyim kendi markamız altında birleşti; fason ve private label üretim."]
-    - [Bugün, Fronte Home, "Kendi ev tekstili markamız; kumaşı ve bitişi gerçek müşteride test ettiğimiz alan."]
-    - ["2027", "Heimtextil, Frankfurt", "12–15 Ocak 2027'de numunelerimizle fuardayız. Görüşme için bize yazın."]
+  - - '1995'
+    - Başlangıç
+    - Denizli'nin öncü tekstil firmalarında üretim deneyimi.
+  - - '2015'
+    - Berke Tekstil
+    - Deneyim kendi markamız altında birleşti; fason ve private label üretim.
+  - - Bugün
+    - Fronte Home
+    - Kendi ev tekstili markamız; kumaşı ve bitişi gerçek müşteride test ettiğimiz alan.
+  - - '2027'
+    - Heimtextil, Frankfurt
+    - 12–15 Ocak 2027'de numunelerimizle fuardayız. Görüşme için bize yazın.
   cta: Fuarda görüşelim
 quality:
   eyebrow: Kalite ve süreç
   h: Her adımı görürsünüz.
-  lead: "Numune onayı, üretim ilerlemesi, kontrol sonuçları ve sevkiyat durumu size düzenli olarak raporlanır."
+  lead: Numune onayı, üretim ilerlemesi, kontrol sonuçları ve sevkiyat durumu size düzenli olarak raporlanır.
   you_get: Size gelen
   steps:
-    - [İhtiyaç ve numune, Numune fotoğrafları ve onay]
-    - [Kumaş ve aksesuar, Malzeme listesi]
-    - [Üretim planı, Termin planı]
-    - [Ara kontroller, Ara kontrol sonuçları]
-    - [Final kontrol ve paket, Final kontrol raporu]
-    - [Sevkiyat, Sevk ve kargo takip bilgisi]
+  - - İhtiyaç ve numune
+    - Numune fotoğrafları ve onay
+  - - Kumaş ve aksesuar
+    - Malzeme listesi
+  - - Üretim planı
+    - Termin planı
+  - - Ara kontroller
+    - Ara kontrol sonuçları
+  - - Final kontrol ve paket
+    - Final kontrol raporu
+  - - Sevkiyat
+    - Sevk ve kargo takip bilgisi
   report_label: Örnek müşteri raporu
   report_title: Sipariş · Hoodie serisi
   report_badge: Temsili
   report_rows:
-    - [Numune onayı, Tamamlandı, done]
-    - [Kumaş ve aksesuar, Tamamlandı, done]
-    - [Üretim planı, Tamamlandı, done]
-    - [Ara kontroller, Devam ediyor, active]
-    - [Final kontrol ve paket, Bekliyor, wait]
-    - [Sevkiyat, Bekliyor, wait]
+  - - Numune onayı
+    - Tamamlandı
+    - done
+  - - Kumaş ve aksesuar
+    - Tamamlandı
+    - done
+  - - Üretim planı
+    - Tamamlandı
+    - done
+  - - Ara kontroller
+    - Devam ediyor
+    - active
+  - - Final kontrol ve paket
+    - Bekliyor
+    - wait
+  - - Sevkiyat
+    - Bekliyor
+    - wait
   report_h: Siparişiniz hiçbir aşamada görünmez olmaz.
-  report_p: "Her adım tamamlandığında fotoğraflar ve kontrol sonuçlarıyla bilgi alırsınız. Kesimde kumaşı kalıba göre planlıyor, boşlukları aynı müşterinin diğer ürünleriyle değerlendiriyoruz: daha az fire, daha düşük maliyet."
+  report_p: 'Her adım tamamlandığında fotoğraflar ve kontrol sonuçlarıyla bilgi alırsınız. Kesimde kumaşı kalıba göre planlıyor, boşlukları aynı müşterinin diğer ürünleriyle değerlendiriyoruz: daha az fire, daha düşük maliyet.'
 sectors:
   eyebrow: Kimlerle çalışıyoruz
-  h: ["Markadan otele,", aynı özen.]
-  lead: "İstanbul'dan Almanya'ya, kendi koleksiyonunu üretecek bir ortak arayan markalarla çalışıyoruz."
+  h:
+  - Markadan otele,
+  - aynı özen.
+  lead: İstanbul'dan Almanya'ya, kendi koleksiyonunu üretecek bir ortak arayan markalarla çalışıyoruz.
   items:
-    - [Ev tekstili markaları, "Yatak, banyo, masa ve dekoratif koleksiyonlar."]
-    - [Bebek giyim markaları, "Müslin, body, tulum ve aksesuar."]
-    - [Moda ve streetwear markaları, "Hoodie, sweatshirt ve takım."]
-    - [Oteller ve konaklama, "Logolu havlu, bornoz ve yatak tekstili."]
-    - [Kurumsal ve promosyon, "Çanta, kalemlik ve ekip giyimi."]
-    - [E-ticaret markaları, "Tekli paket ve kargoya hazır sevkiyat."]
-  markets: "İstanbul · Almanya · Avrupa · Dünya"
+  - - Ev tekstili markaları
+    - Yatak, banyo, masa ve dekoratif koleksiyonlar.
+  - - Bebek giyim markaları
+    - Müslin, body, tulum ve aksesuar.
+  - - Moda ve streetwear markaları
+    - Hoodie, sweatshirt ve takım.
+  - - Oteller ve konaklama
+    - Logolu havlu, bornoz ve yatak tekstili.
+  - - Kurumsal ve promosyon
+    - Çanta, kalemlik ve ekip giyimi.
+  - - E-ticaret markaları
+    - Tekli paket ve kargoya hazır sevkiyat.
+  markets: İstanbul · Almanya · Avrupa · Dünya
 rfq:
   eyebrow: Numune iste
   h: Tasarımınızı gönderin.
-  p: "Elinizde ne varsa yeterli: çizim, teknik föy, örnek ürün fotoğrafı ya da sadece fikir. Size numune ve fiyat için dönelim."
+  p: 'Elinizde ne varsa yeterli: çizim, teknik föy, örnek ürün fotoğrafı ya da sadece fikir. Size numune ve fiyat için dönelim.'
   title: Numune ve teklif formu
   company: Firma
   email: E-posta
@@ -148,7 +214,7 @@ rfq:
   qty: Tahmini adet
   date: Hedef teslim tarihi
   file: Tasarım dosyası
-  file_note: "PDF, AI, JPG, PNG ya da ZIP. Büyük dosyalar için WhatsApp veya e-posta da kullanabilirsiniz."
+  file_note: PDF, AI, JPG, PNG ya da ZIP. Büyük dosyalar için WhatsApp veya e-posta da kullanabilirsiniz.
   note: Proje notu
   send: Numune talebini gönder
   l_phone: Telefon
@@ -158,99 +224,230 @@ products:
   home:
     slug: ev-tekstili
     name: Ev Tekstili
-    short: "Yatak, banyo, masa ve mutfak, dekoratif ürünler. Kumaş, nakış ve bitiş markanıza özel."
-    chips: [Yatak, Banyo, Masa & mutfak, Dekoratif]
-    title: "Ev Tekstili Üreticisi · Private Label · Berke Tekstil"
-    desc: "Türkiye'de private label ev tekstili üretimi: yatak, banyo, masa ve mutfak, dekoratif ürünlerde nakış, etiket ve ambalaj."
-    lead: "Yatak, banyo, masa ve mutfak ile dekoratif ürünlerde markanıza özel üretim. Kumaş, nakış, etiket ve ambalaj sizin standardınızda."
+    short: Yatak, banyo, masa ve mutfak, dekoratif ürünler. Kumaş, nakış ve bitiş markanıza özel.
+    chips:
+    - Yatak
+    - Banyo
+    - Masa & mutfak
+    - Dekoratif
+    title: Ev Tekstili Üreticisi · Private Label · Berke Tekstil
+    desc: 'Türkiye''de private label ev tekstili üretimi: yatak, banyo, masa ve mutfak, dekoratif ürünlerde nakış, etiket ve ambalaj.'
+    lead: Yatak, banyo, masa ve mutfak ile dekoratif ürünlerde markanıza özel üretim. Kumaş, nakış, etiket ve ambalaj sizin standardınızda.
     tiles:
-      - [Yatak tekstili, "Nevresim, çarşaf ve yastık kılıfı.", ""]
-      - [Banyo, "Havlu ve bornoz, nakışlı ya da düz.", monogram.jpg]
-      - [Masa ve mutfak, "Masa örtüsü, peçete ve mutfak tekstili.", ""]
-      - [Dekoratif, "Yastık, örtü ve tamamlayıcı parçalar.", ""]
+    - - Yatak tekstili
+      - Nevresim, çarşaf ve yastık kılıfı.
+      - ''
+    - - Banyo
+      - Havlu ve bornoz, nakışlı ya da düz.
+      - monogram.jpg
+    - - Masa ve mutfak
+      - Masa örtüsü, peçete ve mutfak tekstili.
+      - ''
+    - - Dekoratif
+      - Yastık, örtü ve tamamlayıcı parçalar.
+      - ''
     options:
-      - [Kumaş, "Koleksiyonunuza göre seçilir, numuneyle onaylanır."]
-      - [Uygulama, "Nakış, baskı ve dokuma etiket; logo, monogram ve bordür."]
-      - [Renk ve ölçü, "Koleksiyon paletinize ve ölçülerinize göre."]
-      - [Ambalaj ve sevk, "Perakende ya da e-ticarete uygun paket, anlaşmalı kargo."]
+    - - Kumaş
+      - Koleksiyonunuza göre seçilir, numuneyle onaylanır.
+    - - Uygulama
+      - Nakış, baskı ve dokuma etiket; logo, monogram ve bordür.
+    - - Renk ve ölçü
+      - Koleksiyon paletinize ve ölçülerinize göre.
+    - - Ambalaj ve sevk
+      - Perakende ya da e-ticarete uygun paket, anlaşmalı kargo.
   baby:
     slug: bebek-giyim
     name: Bebek Giyim
-    short: "Müslin örtüden body ve tulumlara. Kumaş, aksesuar ve etiket markanızla birlikte seçilir."
-    chips: [Müslin örtü, Body, Tulum, Aksesuar]
-    title: "Bebek Giyim Üreticisi · Private Label · Berke Tekstil"
-    desc: "Türkiye'de private label bebek giyim üretimi: müslin örtü, body, tulum ve aksesuarda markaya özel etiket ve ambalaj."
-    lead: "Bebek giyim markaları için koleksiyon üretimi. Cilde temas eden ürünlerde kumaş ve aksesuarı sizinle birlikte seçer, temiz dikiş ve markanıza özel etiketle teslim ederiz."
+    short: Müslin örtüden body ve tulumlara. Kumaş, aksesuar ve etiket markanızla birlikte seçilir.
+    chips:
+    - Müslin örtü
+    - Body
+    - Tulum
+    - Aksesuar
+    title: Bebek Giyim Üreticisi · Private Label · Berke Tekstil
+    desc: 'Türkiye''de private label bebek giyim üretimi: müslin örtü, body, tulum ve aksesuarda markaya özel etiket ve ambalaj.'
+    lead: Bebek giyim markaları için koleksiyon üretimi. Cilde temas eden ürünlerde kumaş ve aksesuarı sizinle birlikte seçer, temiz dikiş ve markanıza özel etiketle teslim ederiz.
     hero_img: baby-muslin-hero.jpg
     tiles:
-      - [Müslin örtü ve battaniye, "Kundak, çok amaçlı örtü ve hafif battaniye.", baby-muslin-tile.jpg]
-      - [Body, "Günlük temel parçalar, markanızın kalıbıyla.", baby-bodysuit.jpg]
-      - [Tulum ve pijama, "Uyku ve ev giyimi koleksiyonları.", baby-sleepsuit.jpg]
-      - ["Önlük, şapka, aksesuar", "Setleri tamamlayan küçük parçalar.", baby-accessories.jpg]
+    - - Müslin örtü ve battaniye
+      - Kundak, çok amaçlı örtü ve hafif battaniye.
+      - baby-muslin-tile.jpg
+    - - Body
+      - Günlük temel parçalar, markanızın kalıbıyla.
+      - baby-bodysuit.jpg
+    - - Tulum ve pijama
+      - Uyku ve ev giyimi koleksiyonları.
+      - baby-sleepsuit.jpg
+    - - Önlük, şapka, aksesuar
+      - Setleri tamamlayan küçük parçalar.
+      - baby-accessories.jpg
     care_h: Bebek tekstilinde dikkat ettiklerimiz
     care:
-      - [Kumaş, "Pazarınızın istediği test ve belge taleplerini üretim planına baştan dahil ederiz."]
-      - [Dikiş, "Yumuşak ve düz dikiş bitişleri; iç etiketin yeri markanızla belirlenir."]
-      - [Aksesuar, "Çıtçıt, düğme ve şeritlerin tedariki ve üretim içi kontrolü."]
-      - [Nakış, "Müslin ve pamukta isim, monogram ve küçük motif."]
+    - - Kumaş
+      - Pazarınızın istediği test ve belge taleplerini üretim planına baştan dahil ederiz.
+    - - Dikiş
+      - Yumuşak ve düz dikiş bitişleri; iç etiketin yeri markanızla belirlenir.
+    - - Aksesuar
+      - Çıtçıt, düğme ve şeritlerin tedariki ve üretim içi kontrolü.
+    - - Nakış
+      - Müslin ve pamukta isim, monogram ve küçük motif.
     options:
-      - [Set ve hediye, "Koleksiyon setleri ve kutulu hediye ambalajı."]
-      - [Etiket, "Marka, beden ve bakım etiketleri."]
-      - [Renk ve baskı, "Koleksiyon paletinize göre renk ve desen."]
-      - [E-ticaret, "Tekli paket ve kargoya hazır sevkiyat."]
+    - - Set ve hediye
+      - Koleksiyon setleri ve kutulu hediye ambalajı.
+    - - Etiket
+      - Marka, beden ve bakım etiketleri.
+    - - Renk ve baskı
+      - Koleksiyon paletinize göre renk ve desen.
+    - - E-ticaret
+      - Tekli paket ve kargoya hazır sevkiyat.
   hoodie:
     slug: hoodie-sweatshirt
     name: Hoodie & Sweatshirt
-    short: "Kapüşonlu, sweatshirt ve takımlar. Kumaş, ribana, nakış ya da baskı sizin tasarımınızla."
-    chips: [Hoodie, Sweatshirt, Eşofman takımı, Kurumsal seri]
-    title: "Hoodie ve Sweatshirt Üreticisi · Private Label · Berke Tekstil"
-    desc: "Türkiye'de private label hoodie ve sweatshirt üretimi: markanızın kalıbı, kumaşı, nakış ve baskısıyla numuneden seri üretime."
-    lead: "Markanızın hoodie, sweatshirt ve takımlarını tasarımınızdan üretiyoruz. Kalıp, kumaş, ribana, nakış ya da baskı ve etiket; önce numune, onayınızla seri üretim."
+    short: Kapüşonlu, sweatshirt ve takımlar. Kumaş, ribana, nakış ya da baskı sizin tasarımınızla.
+    chips:
+    - Hoodie
+    - Sweatshirt
+    - Eşofman takımı
+    - Kurumsal seri
+    title: Hoodie ve Sweatshirt Üreticisi · Private Label · Berke Tekstil
+    desc: 'Türkiye''de private label hoodie ve sweatshirt üretimi: markanızın kalıbı, kumaşı, nakış ve baskısıyla numuneden seri üretime.'
+    lead: Markanızın hoodie, sweatshirt ve takımlarını tasarımınızdan üretiyoruz. Kalıp, kumaş, ribana, nakış ya da baskı ve etiket; önce numune, onayınızla seri üretim.
     tiles:
-      - [Hoodie, "Kapüşonlu, cepli ya da cepsiz, fermuarlı ya da kapalı.", ""]
-      - [Sweatshirt, "Bisiklet yaka, yarım fermuar ve oversize kalıplar.", ""]
-      - [Eşofman takımı, "Üst ve alt aynı kumaş ve renkte.", ""]
-      - [Kurumsal ve ekip serisi, "Logolu ekip, etkinlik ve kulüp giyimi.", ""]
+    - - Hoodie
+      - Kapüşonlu, cepli ya da cepsiz, fermuarlı ya da kapalı.
+      - ''
+    - - Sweatshirt
+      - Bisiklet yaka, yarım fermuar ve oversize kalıplar.
+      - ''
+    - - Eşofman takımı
+      - Üst ve alt aynı kumaş ve renkte.
+      - ''
+    - - Kurumsal ve ekip serisi
+      - Logolu ekip, etkinlik ve kulüp giyimi.
+      - ''
     options:
-      - [Kalıp, "Sizin kalıbınız ya da birlikte geliştirdiğimiz kalıp."]
-      - [Kumaş, "Tip ve gramaj tasarımınıza göre, numuneyle onaylanır."]
-      - [Uygulama, "Nakış, baskı, yama ve dokuma etiket."]
-      - [Beden seti, "Beden tablonuza göre seri; beden bazında kontrol."]
-      - [Etiket ve ambalaj, "Marka etiketi, askılık etiket ve tekli paket."]
+    - - Kalıp
+      - Sizin kalıbınız ya da birlikte geliştirdiğimiz kalıp.
+    - - Kumaş
+      - Tip ve gramaj tasarımınıza göre, numuneyle onaylanır.
+    - - Uygulama
+      - Nakış, baskı, yama ve dokuma etiket.
+    - - Beden seti
+      - Beden tablonuza göre seri; beden bazında kontrol.
+    - - Etiket ve ambalaj
+      - Marka etiketi, askılık etiket ve tekli paket.
   bags:
     slug: canta-kalemlik
     name: Çanta & Kalemlik
-    short: "Bez çanta, kalemlik ve pouch; perakende, okul ve kurumsal promosyon serileri."
-    chips: [Bez çanta, Kalemlik, Pouch, Promosyon]
-    title: "Bez Çanta ve Kalemlik Üreticisi · Private Label · Berke Tekstil"
-    desc: "Türkiye'de bez çanta, kalemlik ve pouch üretimi: perakende ve kurumsal promosyon için markaya özel nakış, baskı ve etiket."
-    lead: "Bez çanta, kalemlik ve küçük aksesuar çantalarını markanız ya da kurumunuz için üretiyoruz. Kumaş, fermuar, nakış ya da baskı ve etiket sizin seçiminizle."
+    short: Bez çanta, kalemlik ve pouch; perakende, okul ve kurumsal promosyon serileri.
+    chips:
+    - Bez çanta
+    - Kalemlik
+    - Pouch
+    - Promosyon
+    title: Bez Çanta ve Kalemlik Üreticisi · Private Label · Berke Tekstil
+    desc: 'Türkiye''de bez çanta, kalemlik ve pouch üretimi: perakende ve kurumsal promosyon için markaya özel nakış, baskı ve etiket.'
+    lead: Bez çanta, kalemlik ve küçük aksesuar çantalarını markanız ya da kurumunuz için üretiyoruz. Kumaş, fermuar, nakış ya da baskı ve etiket sizin seçiminizle.
     tiles:
-      - [Bez çanta, "Perakende, mağaza ve etkinlik çantaları.", ""]
-      - [Kalemlik, "Okul, ofis ve kırtasiye markaları için.", ""]
-      - [Pouch ve necessaire, "Makyaj, seyahat ve hediye setleri.", ""]
-      - [Kurumsal promosyon, "Logolu set ve etkinlik serileri.", ""]
+    - - Bez çanta
+      - Perakende, mağaza ve etkinlik çantaları.
+      - ''
+    - - Kalemlik
+      - Okul, ofis ve kırtasiye markaları için.
+      - ''
+    - - Pouch ve necessaire
+      - Makyaj, seyahat ve hediye setleri.
+      - ''
+    - - Kurumsal promosyon
+      - Logolu set ve etkinlik serileri.
+      - ''
     options:
-      - [Kumaş, "Bez, kanvas ve astarlı seçenekler; numuneyle onay."]
-      - [Fermuar ve aksesuar, "Fermuar, sap ve aksesuar tedariki."]
-      - [Uygulama, "Nakış, baskı ve dokuma etiket."]
-      - [Ambalaj, "Tekli ya da set halinde paketleme."]
+    - - Kumaş
+      - Bez, kanvas ve astarlı seçenekler; numuneyle onay.
+    - - Fermuar ve aksesuar
+      - Fermuar, sap ve aksesuar tedariki.
+    - - Uygulama
+      - Nakış, baskı ve dokuma etiket.
+    - - Ambalaj
+      - Tekli ya da set halinde paketleme.
   hotel:
     slug: otel-banyo
     name: Otel & Banyo
-    short: "Oteller ve konaklama markaları için havlu, bornoz ve yatak tekstili; logolu nakışla."
-    chips: [Havlu, Bornoz, Nevresim, Logolu nakış]
-    title: "Otel Tekstili ve Logolu Havlu Üretimi · Berke Tekstil"
-    desc: "Oteller için logolu havlu, bornoz ve yatak tekstili üretimi; kendi atölyemizde nakış, numune ve seri üretim."
-    lead: "Oteller ve konaklama markaları için havlu, bornoz ve yatak tekstili. Otel logonuzu kendi atölyemizde işliyor, numune onayıyla seri üretime geçiyoruz."
+    short: Oteller ve konaklama markaları için havlu, bornoz ve yatak tekstili; logolu nakışla.
+    chips:
+    - Havlu
+    - Bornoz
+    - Nevresim
+    - Logolu nakış
+    title: Otel Tekstili ve Logolu Havlu Üretimi · Berke Tekstil
+    desc: Oteller için logolu havlu, bornoz ve yatak tekstili üretimi; kendi atölyemizde nakış, numune ve seri üretim.
+    lead: Oteller ve konaklama markaları için havlu, bornoz ve yatak tekstili. Otel logonuzu kendi atölyemizde işliyor, numune onayıyla seri üretime geçiyoruz.
     hero_img: monogram.jpg
     tiles:
-      - [Havlu seti, "El, yüz, banyo ve havuz havlusu.", towel.jpg]
-      - [Bornoz, "Waffle ve havlu bornoz, logolu ya da düz.", monogram.jpg]
-      - [Yatak tekstili, "Nevresim, çarşaf ve yastık kılıfı.", ""]
-      - [Logo ve monogram, "Otel logonuz, odanın renginde iplikle.", ""]
+    - - Havlu seti
+      - El, yüz, banyo ve havuz havlusu.
+      - towel.jpg
+    - - Bornoz
+      - Waffle ve havlu bornoz, logolu ya da düz.
+      - monogram.jpg
+    - - Yatak tekstili
+      - Nevresim, çarşaf ve yastık kılıfı.
+      - ''
+    - - Logo ve monogram
+      - Otel logonuz, odanın renginde iplikle.
+      - ''
     options:
-      - [Nakış, "Logo, monogram ve bordür; kendi atölyemizde."]
-      - [Renk ve ölçü, "Otel standardınıza göre ölçü ve renk."]
-      - [Etiket, "Otel ya da tedarikçi etiketi."]
-      - [Sevkiyat, "Oda ya da kat bazında paketleme seçeneği."]
+    - - Nakış
+      - Logo, monogram ve bordür; kendi atölyemizde.
+    - - Renk ve ölçü
+      - Otel standardınıza göre ölçü ve renk.
+    - - Etiket
+      - Otel ya da tedarikçi etiketi.
+    - - Sevkiyat
+      - Oda ya da kat bazında paketleme seçeneği.
+collections:
+  eyebrow: Koleksiyonlar
+  h: Beş ürün grubu, tek üretim ortağı.
+  intro: Ev tekstilinden bebek giyime, hoodie’den kalemliğe. Her grup kendi kumaşı, kalıbı ve bitişiyle; hepsi aynı masada, aynı takvimle.
+  more: Koleksiyonu gör
+  custom: Listede olmayan bir ürün mü? Tasarımınızı gönderin.
+craft:
+  eyebrow: Üretim
+  h: Kalite, detayda görünür.
+  intro: Kumaşın seçiminden son dikişe kadar her adımı numuneyle onaylıyor, aynı standartta seriye taşıyoruz.
+  items:
+  - - Kumaş
+    - Koleksiyonunuza göre seçilir, numuneyle onaylanır.
+  - - Nakış
+    - Logo, monogram ve bordür, kendi atölyemizde işlenir.
+  - - Dikiş ve detay
+    - Onaylı numunenin standardı, her parçada aynı.
+  - - Bitmiş ürün
+    - Markanızın etiketiyle, sevkiyata hazır.
+process:
+  eyebrow: Süreç
+  h: Fikirden sevkiyata beş adım.
+  lead: Her adım tamamlandığında fotoğraflar ve kontrol sonuçlarıyla bilgi alırsınız. Sorunuz olduğunda tek muhatabınız var.
+  you_get: Size gelen
+  steps:
+  - - Tasarım / fikir
+    - Ar-Ge dosyanız, çiziminiz, teknik föyünüz ya da örnek ürününüz. Kumaş ve aksesuarı birlikte seçeriz.
+    - Malzeme listesi
+  - - Numune
+    - Ürünü onaydan önce görür, dokunur, denersiniz.
+    - Numune fotoğrafları ve onay
+  - - Üretim
+    - Onaylı numunenin standardında, planlanan takvimle.
+    - Termin planı
+  - - Kalite kontrol
+    - Ara ve final kontroller; sorun deponuza ulaşmadan çözülür.
+    - Kontrol sonuçları
+  - - Paketleme ve sevkiyat
+    - Etiket, paket ve koli prosedürünüze göre; anlaşmalı kargoyla.
+    - Sevk ve kargo takip bilgisi
+about_extra:
+  markets: İstanbul’dan Almanya’ya, kendi koleksiyonunu üretecek bir ortak arayan markalarla çalışıyoruz.
+request:
+  eyebrow: Proje talebi
+  h: Projenizi konuşalım.
+  lead: Ne üretmek istediğinizi seçin; numune için neye ihtiyacımız olduğunu hemen görün. Seçimleriniz forma aktarılır.

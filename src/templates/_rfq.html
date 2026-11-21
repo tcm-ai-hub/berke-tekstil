@@ -1,36 +1,53 @@
 {% macro rfq(pg=None) -%}
-<section id="rfq" class="sec dark">
-<div class="wrap g2" style="gap:56px">
-<div>
-<p class="mono eyebrow">{{ L.rfq.eyebrow }}</p>
-<h2 class="h2 serif" style="margin-bottom:22px">{{ L.rfq.h }}</h2>
-<p class="lead" style="margin-bottom:36px">{{ L.rfq.p }}</p>
-<a href="https://wa.me/{{ S.company.whatsapp }}" class="chan"><span class="lbl">WhatsApp</span><span class="v">{{ S.company.whatsapp_label }}</span></a>
-<a href="tel:{{ S.company.phone|replace(' ', '') }}" class="chan"><span class="lbl">{{ L.rfq.l_phone }}</span><span class="v">{{ S.company.phone }}</span></a>
-<a href="mailto:{{ S.company.email }}" class="chan"><span class="lbl">{{ L.rfq.l_mail }}</span><span class="v">{{ S.company.email }}</span></a>
-<div class="chan" style="border-bottom:1px solid rgba(255,255,255,.18)"><span class="lbl">{{ L.rfq.l_addr }}</span><span style="font-size:16px;line-height:1.5">{{ S.company.address }}</span></div>
+<section id="rfq" class="sec rfq">
+<div class="wrap rfq-grid">
+<div class="rfq-side">
+<p class="eyebrow">{{ L.rfq.eyebrow }}</p>
+<h2 class="h2 serif">{{ L.rfq.h }}</h2>
+<p class="lead">{{ L.rfq.p }}</p>
+<dl class="contact">
+<div><dt>WhatsApp</dt><dd><a href="https://wa.me/{{ S.company.whatsapp }}">{{ S.company.whatsapp_label }}</a></dd></div>
+<div><dt>{{ L.rfq.l_phone }}</dt><dd><a href="tel:{{ S.company.phone|replace(' ', '') }}">{{ S.company.phone }}</a></dd></div>
+<div><dt>{{ L.rfq.l_mail }}</dt><dd><a href="mailto:{{ S.company.email }}">{{ S.company.email }}</a></dd></div>
+<div><dt>{{ L.rfq.l_addr }}</dt><dd>{{ S.company.address }}</dd></div>
+</dl>
+{% if L.quick %}
+<details class="quick">
+<summary>{{ L.quick.h }}</summary>
+<p class="small">{{ L.quick.p }}</p>
+<form class="form-lite" action="{{ S.form_endpoint or '#' }}" method="post" enctype="multipart/form-data">
+<input type="hidden" name="source" value="quick">
+<div class="field"><label for="q-pg">{{ L.quick.group }}</label><select id="q-pg" name="product_group">{% for p in S.products %}<option value="{{ p.key }}"{% if pg == p.key %} selected{% endif %}>{{ L.products[p.key].name }}</option>{% endfor %}<option value="other">{{ L.rfq.other }}</option></select></div>
+<div class="field"><label for="q-nm">{{ L.quick.name }}</label><input id="q-nm" name="name" type="text" autocomplete="organization" required></div>
+<div class="field"><label for="q-ph">{{ L.quick.phone }}</label><input id="q-ph" name="phone" type="tel" autocomplete="tel" required></div>
+<div class="field"><label for="q-fl">{{ L.quick.file }}</label><input id="q-fl" name="design_file" type="file" accept=".pdf,.ai,.jpg,.jpeg,.png,.zip"></div>
+<div class="actions"><button type="submit" class="btn btn-red">{{ L.quick.send }}</button><a class="u" href="https://wa.me/{{ S.company.whatsapp }}?text={{ L.quick.wa_text|urlencode }}">{{ L.quick.wa }}</a></div>
+<p class="form-ok" role="status">{{ L.ui.sent }}</p>
+</form>
+</details>
+{% endif %}
 </div>
 <form class="form" id="rfq-form" action="{{ S.form_endpoint or '#' }}" method="post" enctype="multipart/form-data">
-<div class="serif" style="font-size:30px">{{ L.rfq.title }}</div>
+<h3 class="serif form-title">{{ L.rfq.title }}</h3>
 <div class="row2">
-<div class="field"><label for="f-co" class="lbl">{{ L.rfq.company }}</label><input id="f-co" name="company" type="text" autocomplete="organization" required></div>
-<div class="field"><label for="f-em" class="lbl">{{ L.rfq.email }}</label><input id="f-em" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="f-co">{{ L.rfq.company }}</label><input id="f-co" name="company" type="text" autocomplete="organization" required></div>
+<div class="field"><label for="f-em">{{ L.rfq.email }}</label><input id="f-em" name="email" type="email" autocomplete="email" required></div>
 </div>
-<div class="field"><label for="f-ph" class="lbl">{{ L.rfq.phone }}</label><input id="f-ph" name="phone" type="tel" autocomplete="tel"></div>
+<div class="field"><label for="f-ph">{{ L.rfq.phone }}</label><input id="f-ph" name="phone" type="tel" autocomplete="tel"></div>
 <fieldset>
-<legend class="lbl" style="margin-bottom:10px">{{ L.rfq.group }}</legend>
+<legend>{{ L.rfq.group }}</legend>
 <div class="radios">
-{% for p in S.products %}<label class="radio"><input type="radio" name="product_group" value="{{ p.key }}"{% if pg == p.key or (pg is none and loop.first) %} checked{% endif %}>{{ L.products[p.key].name }}</label>{% endfor %}
-<label class="radio"><input type="radio" name="product_group" value="other">{{ L.rfq.other }}</label>
+{% for p in S.products %}<label class="radio"><input type="radio" name="product_group" value="{{ p.key }}"{% if pg == p.key or (pg is none and loop.first) %} checked{% endif %}><span>{{ L.products[p.key].name }}</span></label>{% endfor %}
+<label class="radio"><input type="radio" name="product_group" value="other"><span>{{ L.rfq.other }}</span></label>
 </div>
 </fieldset>
 <div class="row2">
-<div class="field"><label for="f-qty" class="lbl">{{ L.rfq.qty }}</label><input id="f-qty" name="quantity" type="text"></div>
-<div class="field"><label for="f-dt" class="lbl">{{ L.rfq.date }}</label><input id="f-dt" name="target_date" type="date"></div>
+<div class="field"><label for="f-qty">{{ L.rfq.qty }}</label><input id="f-qty" name="quantity" type="text"></div>
+<div class="field"><label for="f-dt">{{ L.rfq.date }}</label><input id="f-dt" name="target_date" type="date"></div>
 </div>
-<div class="field"><label for="f-file" class="lbl">{{ L.rfq.file }}</label><input id="f-file" name="design_file" type="file" accept=".pdf,.ai,.jpg,.jpeg,.png,.zip" multiple><small class="hint">{{ L.rfq.file_note }}</small></div>
-<div class="field"><label for="f-note" class="lbl">{{ L.rfq.note }}</label><textarea id="f-note" name="note" rows="4"></textarea></div>
-<button type="submit" class="btn btn-red" style="align-self:flex-start">{{ L.rfq.send }}</button>
+<div class="field"><label for="f-file">{{ L.rfq.file }}</label><input id="f-file" name="design_file" type="file" accept=".pdf,.ai,.jpg,.jpeg,.png,.zip" multiple><small class="hint">{{ L.rfq.file_note }}</small></div>
+<div class="field"><label for="f-note">{{ L.rfq.note }}</label><textarea id="f-note" name="note" rows="4"></textarea></div>
+<button type="submit" class="btn btn-red">{{ L.rfq.send }}</button>
 <p class="form-ok" role="status">{{ L.ui.sent }}</p>
 </form>
 </div>

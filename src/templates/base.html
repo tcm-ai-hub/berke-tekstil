@@ -11,12 +11,12 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ desc }}">
-<meta property="og:image" content="{{ S.base_url }}/assets/media/{{ og_img or 'baby-muslin-hero.jpg' }}">
-<meta name="theme-color" content="#101B30">
+<meta property="og:image" content="{{ S.base_url }}/assets/media/{{ og_img or 'fabric-poster.jpg' }}">
+<meta name="theme-color" content="#F6F3EE">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,300..800&family=Fraunces:opsz,wght@9..144,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script type="application/ld+json">{{ org_ld|safe }}</script>
 {% block head %}{% endblock %}
@@ -24,18 +24,18 @@
 <body>
 <a class="skip" href="#main">{{ L.ui.skip }}</a>
 <header class="site-h">
-<div class="wrap" style="position:relative">
-<a class="logo" href="{{ home }}"><b>BERKE</b><span class="mono">Tekstil</span></a>
+<div class="wrap bar">
+<a class="logo" href="{{ home }}" aria-label="Berke Tekstil">BERKE <span>TEKSTİL</span></a>
 <nav class="nav" id="nav" aria-label="Main">
-<a href="{{ home }}#products"{% if is_product %} aria-current="page"{% endif %}>{{ L.nav.products }}</a>
-<a href="{{ home }}#planner">{{ L.nav.planner }}</a>
+<a href="{{ home }}#products"{% if is_product %} aria-current="page"{% endif %}>{{ L.nav.collections }}</a>
+<a href="{{ home }}#craft">{{ L.nav.production }}</a>
 <a href="{{ home }}#about">{{ L.nav.about }}</a>
-<a href="{{ home }}#quality">{{ L.nav.quality }}</a>
 <a href="#rfq">{{ L.nav.contact }}</a>
+<a href="#rfq" class="nav-talk-m">{{ L.nav.talk }}</a>
 </nav>
 <div class="h-right">
-<div class="langs">{% for l in S.languages %}<a href="{{ alts[l] }}" hreflang="{{ l }}" lang="{{ l }}"{% if l == lang %} class="on" aria-current="true"{% endif %}>{{ l|upper }}</a>{% endfor %}{% if 'de' not in S.languages %}<span title="Deutsch — in Vorbereitung" aria-disabled="true">DE</span>{% endif %}</div>
-<a href="#rfq" class="btn btn-red h-cta">{{ L.ui.cta }}</a>
+<div class="langs" aria-label="Language">{% for l in S.languages %}<a href="{{ alts[l] }}" hreflang="{{ l }}" lang="{{ l }}"{% if l == lang %} class="on" aria-current="true"{% endif %}>{{ l|upper }}</a>{% endfor %}{% if 'de' not in S.languages %}<span title="Deutsch — in Vorbereitung" aria-disabled="true">DE</span>{% endif %}</div>
+<a href="#rfq" class="talk">{{ L.nav.talk }}</a>
 <button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav">{{ L.ui.menu }}</button>
 </div>
 </div>
@@ -44,12 +44,21 @@
 {% block main %}{% endblock %}
 </main>
 <footer class="site-f">
-<div class="wrap">
-<span><b>BERKE</b> Tekstil · © 2026 · {{ S.company.address }}</span>
-<span class="mono" style="font-size:11px">{% for k in S.products %}<a href="{{ purl(lang, k.key) }}">{{ L.products[k.key].name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</span>
+<div class="wrap foot">
+<div>
+<div class="logo" style="color:#F6F3EE">BERKE <span>TEKSTİL</span></div>
+<p>{{ S.company.address }}</p>
 </div>
+<nav aria-label="Collections">{% for k in S.products %}<a href="{{ purl(lang, k.key) }}">{{ L.products[k.key].name }}</a>{% endfor %}</nav>
+<div>
+<a href="https://wa.me/{{ S.company.whatsapp }}">WhatsApp {{ S.company.whatsapp_label }}</a>
+<a href="tel:{{ S.company.phone|replace(' ', '') }}">{{ S.company.phone }}</a>
+<a href="mailto:{{ S.company.email }}">{{ S.company.email }}</a>
+</div>
+</div>
+<div class="wrap fine-foot">© 2026 Berke Tekstil</div>
 </footer>
-<nav class="mcta" aria-label="Quick contact"><a href="https://wa.me/{{ S.company.whatsapp }}">WhatsApp</a><a class="r" href="#rfq">{{ L.ui.cta }}</a></nav>
+<nav class="mcta" aria-label="Quick contact"><a href="https://wa.me/{{ S.company.whatsapp }}">WhatsApp</a><a class="r" href="#rfq">{{ L.nav.talk }}</a></nav>
 <script src="/assets/js/site.js" defer></script>
 </body>
 </html>
