@@ -29,8 +29,8 @@ nav:
 hero:
   kicker: "Home textiles · Babywear · Hoodies & sweatshirts · Bags & pencil cases · Hotel textiles"
   place: "Denizli, Türkiye"
-  h1: "Send us your design, we'll make your sample"
-  lead: "An idea, a sketch or a tech pack is enough. We make the sample, produce on your approval, pack it under your label and ship it."
+  h1: "Send us your product, we'll make the sample fast"
+  lead: "Your R&D file, design, tech pack or a sample product is enough. We make the sample, produce on your approval and pack it under your label."
   cta_primary: Request a sample
   cta_secondary: Explore products
   chapters_title: From cotton to product
@@ -44,6 +44,18 @@ hero:
     sewing: Sewing & embroidery
     product: Product
     packing: Packing
+quick:
+  eyebrow: Quick sample request
+  h: "Drop your file, we'll call you right back."
+  p: "Three fields, one minute. Attach your R&D file, sketch or product photo; we'll come back with a sample plan as fast as possible."
+  group: Product group
+  name: Name / Company
+  phone: Phone (WhatsApp)
+  file: "File (optional)"
+  send: Start my sample
+  or: "or"
+  wa: Send via WhatsApp
+  wa_text: "Hello, I'd like to send my product/design for a sample."
 home:
   products_eyebrow: Products
   products_h: ["From home to baby, from hoodies to pencil cases:", one production partner.]

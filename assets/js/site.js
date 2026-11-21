@@ -79,7 +79,7 @@
   }
 
   // forms: without an endpoint show a thank-you note
-  $$("form.form").forEach(function (f) {
+  $$("form.form, form.form-lite").forEach(function (f) {
     f.addEventListener("submit", function (e) {
       var a = f.getAttribute("action");
       if (a && a !== "#") return;

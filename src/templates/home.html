@@ -32,6 +32,29 @@
 </div>
 </section>
 
+<section class="quick" id="quick">
+<div class="wrap quick-grid">
+<div>
+<p class="mono" style="margin:0 0 12px;color:#E9C9D3">{{ L.quick.eyebrow }}</p>
+<h2 class="serif" style="margin:0 0 12px;font-size:40px;line-height:1.05;color:#FFFFFF">{{ L.quick.h }}</h2>
+<p style="margin:0;font-size:16px;line-height:1.55;color:#C9CEDA;max-width:460px">{{ L.quick.p }}</p>
+</div>
+<form class="quick-form form-lite" action="{{ S.form_endpoint or '#' }}" method="post" enctype="multipart/form-data">
+<input type="hidden" name="source" value="quick">
+<div class="qf"><label for="q-pg" class="lbl">{{ L.quick.group }}</label><select id="q-pg" name="product_group">{% for p in S.products %}<option value="{{ p.key }}">{{ L.products[p.key].name }}</option>{% endfor %}<option value="other">{{ L.rfq.other }}</option></select></div>
+<div class="qf"><label for="q-nm" class="lbl">{{ L.quick.name }}</label><input id="q-nm" name="name" type="text" autocomplete="organization" required></div>
+<div class="qf"><label for="q-ph" class="lbl">{{ L.quick.phone }}</label><input id="q-ph" name="phone" type="tel" autocomplete="tel" required></div>
+<div class="qf"><label for="q-fl" class="lbl">{{ L.quick.file }}</label><input id="q-fl" name="design_file" type="file" accept=".pdf,.ai,.jpg,.jpeg,.png,.zip"></div>
+<div class="qf-actions">
+<button type="submit" class="btn btn-red">{{ L.quick.send }} {{ L.ui.arrow }}</button>
+<span class="lbl" style="color:#8F97A8">{{ L.quick.or }}</span>
+<a class="wa" href="https://wa.me/{{ S.company.whatsapp }}?text={{ L.quick.wa_text|urlencode }}">{{ L.quick.wa }}</a>
+</div>
+<p class="form-ok" role="status">{{ L.ui.sent }}</p>
+</form>
+</div>
+</section>
+
 <section id="products" class="wrap sec">
 <div class="g2" style="align-items:end;margin-bottom:48px">
 <div><p class="mono eyebrow">{{ L.home.products_eyebrow }}</p><h2 class="h2 serif">{{ L.home.products_h[0] }} <em>{{ L.home.products_h[1] }}</em></h2></div>

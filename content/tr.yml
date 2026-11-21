@@ -29,8 +29,8 @@ nav:
 hero:
   kicker: "Ev tekstili · Bebek giyim · Hoodie & sweatshirt · Çanta & kalemlik · Otel tekstili"
   place: "Denizli, Türkiye"
-  h1: Tasarımınızı gönderin, numunenizi yapalım
-  lead: "Fikriniz, çiziminiz ya da teknik föyünüz yeterli. Numunesini çıkarır, onayınızla üretir, markanızın etiketiyle paketleyip yola çıkarırız."
+  h1: "Ürününüzü gönderin, numunesini en hızlı sürede yapalım"
+  lead: "Ar-Ge dosyanız, tasarımınız, teknik föyünüz ya da elinizdeki örnek ürün yeterli. Numunesini çıkarır, onayınızla üretir, markanızın etiketiyle paketleriz."
   cta_primary: Numune iste
   cta_secondary: Ürünleri keşfet
   chapters_title: Pamuktan ürüne
@@ -44,6 +44,18 @@ hero:
     sewing: Dikim ve nakış
     product: Ürün
     packing: Paket
+quick:
+  eyebrow: Hızlı numune talebi
+  h: "Dosyanızı bırakın, sizi hemen arayalım."
+  p: "Üç alan, bir dakika. Ar-Ge dosyanızı, çiziminizi ya da ürün fotoğrafınızı ekleyin; numune planı için en kısa sürede dönüş yapalım."
+  group: Ürün grubu
+  name: Ad / Firma
+  phone: Telefon (WhatsApp)
+  file: "Dosya (isteğe bağlı)"
+  send: Numunemi başlat
+  or: "ya da"
+  wa: WhatsApp'tan gönder
+  wa_text: "Merhaba, numune için ürünümü/tasarımımı göndermek istiyorum."
 home:
   products_eyebrow: Ürünler
   products_h: ["Evden bebeğe, hoodie'den kalemliğe:", tek üretim ortağı.]
