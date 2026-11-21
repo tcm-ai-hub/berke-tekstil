@@ -1,0 +1,36 @@
+# Berke Tekstil · site ayarları
+# Bu dosyadaki bir alanı değiştirip main'e kaydettiğinizde site 1-2 dakika içinde güncellenir.
+
+brand: Berke Tekstil
+base_url: "https://berketekstil.com"
+languages: [tr, en]          # Almanca için content/de.yml ekleyip buraya "de" yazın
+
+company:
+  founded_experience: 1995   # sektör deneyiminin başladığı yıl
+  founded_brand: 2015        # Berke Tekstil markasının yılı
+  phone: "+90 530 540 87 95"
+  whatsapp: "905419026900"   # wa.me için, başında + olmadan
+  whatsapp_label: "+90 541 902 69 00"
+  email: info@berketekstil.com
+  address: "Akçeşme Mah. 2608 Sk. No:5, Merkezefendi, Denizli, Türkiye"
+
+# Teklif formunun gideceği adres (ör. Formspree). Boşsa form gönderimde teşekkür mesajı gösterir ama e-posta iletmez.
+form_endpoint: ""
+
+# Girişte sırayla oynayan tekstil hikâyesi. Her satır bir sahne:
+#   type: video ya da image  ·  src: assets/media içindeki dosya  ·  key: dil dosyasındaki hero.chapters anahtarı
+# Yeni video geldiğinde dosyayı assets/media'ya koyup ilgili satırın src'sini değiştirmeniz yeterli.
+hero_clips:
+  - { key: fabric,  type: image, src: baby-muslin-hero.jpg, seconds: 3.5 }
+  - { key: cutting, type: image, src: atelier.jpg,          seconds: 3.5 }
+  - { key: sewing,  type: video, src: stitch.mp4, poster: stitch-poster.jpg }
+  - { key: product, type: image, src: towel.jpg,            seconds: 3.5 }
+  - { key: packing, type: image, src: baby-sleepsuit.jpg,   seconds: 3.5 }
+
+# Ürün grupları: sıralama burada. img boşsa doku yer tutucusu görünür.
+products:
+  - { key: home,   img: towel.jpg }
+  - { key: baby,   img: baby-muslin-card.jpg }
+  - { key: hoodie, img: "" }
+  - { key: bags,   img: "" }
+  - { key: hotel,  img: monogram.jpg }

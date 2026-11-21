@@ -173,3 +173,64 @@ fieldset{border:0;padding:0;margin:0}
 .site-f{padding-bottom:54px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ---- v2: hero playlist, product grid, planner, heritage, sectors ---- */
+.h2 em,.serif em{font-style:italic;color:var(--muslin)}
+.dark .h2 em{color:#E9C9D3}
+.clips{position:absolute;inset:0}
+.clip{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity 1s ease}
+.clip.on{opacity:1}
+img.clip.on{animation:kb 7s ease-out forwards}
+@keyframes kb{from{transform:scale(1.06)}to{transform:scale(1)}}
+.kicker{position:absolute;top:28px;left:40px;right:40px;display:flex;justify-content:space-between;gap:24px;color:#D7DAE1;font-size:11px}
+.hero h1 .dot{color:#E9C9D3}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.pcard h3{font-size:32px}
+.pcard.custom{background:var(--navy);border-color:var(--navy)}
+.pcard.custom:hover{background:#16243F}
+.pcard.custom h3{font-size:34px;line-height:1.1}
+.planner{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:32px;align-items:start}
+.pl-ctrl{display:flex;flex-direction:column;gap:26px}
+.pick{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.pick legend{margin-bottom:12px;color:var(--muslin)}
+.pick label{position:relative;cursor:pointer}
+.pick input{position:absolute;opacity:0;width:1px;height:1px}
+.pick span{display:inline-flex;align-items:center;min-height:46px;padding:0 16px;border:1px solid #CDBFB1;background:#FFFFFF;font-size:15px;font-weight:500}
+.pick input:checked+span{background:var(--navy);border-color:var(--navy);color:#FFFFFF}
+.pick input:focus-visible+span{outline:2px solid var(--red);outline-offset:2px}
+.pl-card{background:var(--navy);color:#FFFFFF;padding:32px;position:sticky;top:96px}
+.pl-sum{margin:14px 0 0}
+.pl-sum div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:10px 0;border-top:1px solid rgba(255,255,255,.16)}
+.pl-sum dt{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#AEB5C4;padding-top:3px}
+.pl-sum dd{margin:0;font-size:16px;font-weight:600}
+.pl-needs{list-style:none;margin:10px 0 0;padding:0}
+.pl-needs li{padding:9px 0 9px 26px;position:relative;font-size:15px;color:#E4E7EE;border-top:1px solid rgba(255,255,255,.12)}
+.pl-needs li::before{content:"";position:absolute;left:4px;top:15px;width:10px;height:10px;border:1px solid #E9C9D3}
+.fine{margin:14px 0 0;font-size:12px;line-height:1.5;color:#8F97A8}
+.her-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:72px;align-items:start}
+.her-year strong{display:block;font-size:180px;line-height:.85;font-weight:300;color:var(--ink);letter-spacing:-.04em}
+.her-year .lbl{display:block;margin-top:12px}
+.tline{list-style:none;margin:32px 0 0;padding:0;border-top:1px solid var(--line)}
+.tline li{display:grid;grid-template-columns:110px 1fr;column-gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.tline .y{grid-row:span 2;font-size:28px;color:var(--red)}
+.tline b{font-size:17px}
+.tline p{margin:4px 0 0;font-size:15px;line-height:1.5;color:var(--body)}
+.sectors{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink)}
+.sectors li{padding:24px 24px 24px 0;border-bottom:1px solid var(--line)}
+.sectors .mono{color:var(--red)}
+.sectors b{display:block;margin:12px 0 6px;font-size:20px}
+.sectors p{margin:0;font-size:15px;line-height:1.5;color:var(--body)}
+.markets{margin:28px 0 0;color:var(--muslin)}
+.radios{display:flex;gap:8px;flex-wrap:wrap}
+.hint{font-size:12px;color:var(--muted);line-height:1.5}
+.field input[type=file]{border-bottom:1px dashed #8A8F99;font-size:14px}
+.st-done{color:#1E6B4A;font-size:11px}.st-active{color:var(--red);font-size:11px}.st-wait{color:#5B6273;font-size:11px}
+@media (max-width:1100px){.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){
+.g3,.planner,.her-grid{grid-template-columns:minmax(0,1fr)}
+.sectors{grid-template-columns:minmax(0,1fr)}
+.pl-card{position:static}
+.her-year strong{font-size:120px}
+.kicker{left:20px;right:20px;flex-direction:column;gap:6px}
+.pl-sum div{grid-template-columns:120px 1fr}
+}

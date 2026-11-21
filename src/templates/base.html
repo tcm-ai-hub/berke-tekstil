@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ desc }}">
+<link rel="canonical" href="{{ S.base_url }}{{ path }}">
+{% for l, p in alts.items() %}<link rel="alternate" hreflang="{{ l }}" href="{{ S.base_url }}{{ p }}">
+{% endfor %}<link rel="alternate" hreflang="x-default" href="{{ S.base_url }}{{ alts['en'] }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ desc }}">
+<meta property="og:image" content="{{ S.base_url }}/assets/media/{{ og_img or 'baby-muslin-hero.jpg' }}">
+<meta name="theme-color" content="#101B30">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,300..800&family=Fraunces:opsz,wght@9..144,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">{{ org_ld|safe }}</script>
+{% block head %}{% endblock %}
+</head>
+<body>
+<a class="skip" href="#main">{{ L.ui.skip }}</a>
+<header class="site-h">
+<div class="wrap" style="position:relative">
+<a class="logo" href="{{ home }}"><b>BERKE</b><span class="mono">Tekstil</span></a>
+<nav class="nav" id="nav" aria-label="Main">
+<a href="{{ home }}#products"{% if is_product %} aria-current="page"{% endif %}>{{ L.nav.products }}</a>
+<a href="{{ home }}#planner">{{ L.nav.planner }}</a>
+<a href="{{ home }}#about">{{ L.nav.about }}</a>
+<a href="{{ home }}#quality">{{ L.nav.quality }}</a>
+<a href="#rfq">{{ L.nav.contact }}</a>
+</nav>
+<div class="h-right">
+<div class="langs">{% for l in S.languages %}<a href="{{ alts[l] }}" hreflang="{{ l }}" lang="{{ l }}"{% if l == lang %} class="on" aria-current="true"{% endif %}>{{ l|upper }}</a>{% endfor %}{% if 'de' not in S.languages %}<span title="Deutsch — in Vorbereitung" aria-disabled="true">DE</span>{% endif %}</div>
+<a href="#rfq" class="btn btn-red h-cta">{{ L.ui.cta }}</a>
+<button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav">{{ L.ui.menu }}</button>
+</div>
+</div>
+</header>
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+<footer class="site-f">
+<div class="wrap">
+<span><b>BERKE</b> Tekstil · © 2026 · {{ S.company.address }}</span>
+<span class="mono" style="font-size:11px">{% for k in S.products %}<a href="{{ purl(lang, k.key) }}">{{ L.products[k.key].name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</span>
+</div>
+</footer>
+<nav class="mcta" aria-label="Quick contact"><a href="https://wa.me/{{ S.company.whatsapp }}">WhatsApp</a><a class="r" href="#rfq">{{ L.ui.cta }}</a></nav>
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>
