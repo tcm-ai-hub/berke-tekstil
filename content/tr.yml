@@ -33,8 +33,11 @@ hero:
   lead: "Fikriniz, çiziminiz ya da teknik föyünüz yeterli. Numunesini çıkarır, onayınızla üretir, markanızın etiketiyle paketleyip yola çıkarırız."
   cta_primary: Numune iste
   cta_secondary: Ürünleri keşfet
-  chapters_title: İplikten pakete
+  chapters_title: Kumaştan pakete
   chapters:
+    cotton: Pamuk
+    yarn: İplik
+    weaving: Dokuma
     fabric: Kumaş
     cutting: Kesim
     sewing: Dikim ve nakış
