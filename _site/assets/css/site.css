@@ -270,3 +270,19 @@ fieldset legend{margin-bottom:12px}
   .pl-sum div,.contact div{grid-template-columns:110px 1fr}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none !important}}
+
+/* v5: tagline, alternating craft rows, closing band */
+.hero .tagline{margin:-12px 0 28px;font-size:22px;font-style:italic;color:var(--red)}
+.craft{grid-template-columns:minmax(0,1fr);row-gap:96px}
+.cr{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:56px;align-items:center;grid-column:1/-1 !important;margin-top:0 !important}
+.cr:nth-child(even){grid-template-columns:minmax(0,4fr) minmax(0,7fr)}
+.cr:nth-child(even) img,.cr:nth-child(even) video{order:2}
+.cr img,.cr video{aspect-ratio:16/11 !important}
+.cr figcaption{margin:0;font-size:16px}
+.cr figcaption b{font-size:34px;margin-bottom:10px}
+.closing{position:relative;height:min(80vh,760px);min-height:480px;overflow:hidden;background:var(--ink)}
+.closing img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78}
+.closing-c{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding-bottom:72px}
+.closing h2{margin:0 0 28px;max-width:720px;font-size:clamp(38px,5vw,72px);line-height:1.02;color:#FFF;font-weight:300;text-shadow:0 1px 24px rgba(0,0,0,.25)}
+.btn-paper{background:var(--paper);color:var(--ink)}.btn-paper:hover{background:#FFF}
+@media (max-width:900px){.cr,.cr:nth-child(even){grid-template-columns:minmax(0,1fr);gap:20px}.cr:nth-child(even) img,.cr:nth-child(even) video{order:0}.closing{height:70vh}}

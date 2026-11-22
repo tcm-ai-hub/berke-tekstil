@@ -52,6 +52,7 @@ hero:
   cta_talk: Let’s talk about your project
   pause: Pause video
   play: Play video
+  tagline: Design. Sample. Delivery.
 quick:
   eyebrow: Quick sample request
   h: Drop your file, we'll call you right back.
@@ -451,3 +452,6 @@ request:
   eyebrow: Project request
   h: Let’s talk about your project.
   lead: Choose what you want to make and see right away what we need for a sample. Your choices are carried into the form.
+closing:
+  h: Your next collection starts here.
+  cta: Let’s talk about your project

@@ -52,6 +52,7 @@ hero:
   cta_talk: Projenizi konuşalım
   pause: Videoyu durdur
   play: Videoyu oynat
+  tagline: Tasarım. Numune. Teslim.
 quick:
   eyebrow: Hızlı numune talebi
   h: Dosyanızı bırakın, sizi hemen arayalım.
@@ -451,3 +452,6 @@ request:
   eyebrow: Proje talebi
   h: Projenizi konuşalım.
   lead: Ne üretmek istediğinizi seçin; numune için neye ihtiyacımız olduğunu hemen görün. Seçimleriniz forma aktarılır.
+closing:
+  h: Bir sonraki koleksiyonunuz burada başlar.
+  cta: Projenizi konuşalım
