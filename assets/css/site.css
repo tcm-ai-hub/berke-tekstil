@@ -286,3 +286,34 @@ fieldset legend{margin-bottom:12px}
 .closing h2{margin:0 0 28px;max-width:720px;font-size:clamp(38px,5vw,72px);line-height:1.02;color:#FFF;font-weight:300;text-shadow:0 1px 24px rgba(0,0,0,.25)}
 .btn-paper{background:var(--paper);color:var(--ink)}.btn-paper:hover{background:#FFF}
 @media (max-width:900px){.cr,.cr:nth-child(even){grid-template-columns:minmax(0,1fr);gap:20px}.cr:nth-child(even) img,.cr:nth-child(even) video{order:0}.closing{height:70vh}}
+
+/* v6: scroll story — cotton to product */
+.story{position:relative;background:var(--ink)}
+.story-media{position:sticky;top:0;height:100vh;margin-bottom:-100vh;overflow:hidden}
+.sm{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease}
+.sm.on{opacity:1}
+.sm img,.sm video{width:100%;height:100%;object-fit:cover}
+.sm::after{content:"";position:absolute;inset:0;background:rgba(20,18,16,.32)}
+.sm-type{background:var(--paper2);display:flex;align-items:center;justify-content:flex-end;padding-right:6vw}
+.sm-type::after{display:none}
+.sm-type .serif{font-size:clamp(120px,20vw,320px);line-height:.8;color:#E2D9CD;font-style:italic}
+.story-index{position:sticky;top:50vh;z-index:3;list-style:none;margin:0;padding:0 0 0 48px;height:0;font-size:12px;letter-spacing:.04em}
+.story-index li{color:rgba(246,243,238,.5);padding:3px 0;transform:translateY(-50%);transition:color .4s}
+.story-index li.on{color:#FFF}
+.story.light-on .story-index li{color:rgba(28,28,28,.35)}.story.light-on .story-index li.on{color:var(--ink)}
+.ss{position:relative;z-index:2;min-height:100vh;display:flex;align-items:flex-end;color:#FFF}
+.ss-c{width:100%;padding-bottom:14vh;padding-left:200px}
+.ss.light{color:var(--ink)}
+.ss h1,.ss h2{margin:0 0 20px;max-width:880px;font-size:clamp(44px,6.4vw,104px);line-height:.98;font-weight:300}
+.ss-p{margin:0 0 28px;max-width:460px;font-size:18px;line-height:1.6;opacity:.92}
+.ss-n{margin:0 0 18px;font-size:13px;opacity:.8}
+.ss .eyebrow{color:inherit;opacity:.85}
+.ss .u{color:inherit}
+.cue{margin:40px 0 0;font-size:13px;opacity:.7}
+@media (max-width:900px){
+.story-index{display:none}
+.ss-c{padding-left:20px;padding-bottom:12vh}
+.ss-p{font-size:16px}
+.sm-type{justify-content:center;padding:0}
+}
+@media (prefers-reduced-motion:reduce){.sm{transition:none}}

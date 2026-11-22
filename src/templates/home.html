@@ -1,24 +1,21 @@
 {% extends "base.html" %}
 {% from "_rfq.html" import rfq with context %}
-{% block head %}<link rel="preload" as="image" href="/assets/media/fabric-poster.jpg">{% endblock %}
+{% block head %}{% endblock %}
 {% block main %}
-<section id="top" class="hero">
-<div class="wrap hero-grid">
-<div class="hero-copy">
-<p class="eyebrow caps">{{ L.hero.eyebrow }}</p>
-<h1 class="serif">{{ L.hero.h1 }}</h1>
-<p class="tagline serif">{{ L.hero.tagline }}</p>
-<p class="lead">{{ L.hero.lead }}</p>
-<div class="actions">
-<a href="#products" class="btn btn-ink">{{ L.hero.cta_collections }}</a>
-<a href="#rfq" class="u">{{ L.hero.cta_talk }}</a>
+<section id="top" class="story" data-story>
+<div class="story-media" aria-hidden="true">
+{% for c in L.story %}{% set m = media(S.story_media[c.key]) %}<div class="sm{% if loop.first %} on{% endif %}{% if not m %} sm-type{% endif %}" data-i="{{ loop.index0 }}">{% if m and m.kind == 'video' %}<video src="/assets/media/{{ m.src }}"{% if m.poster %} poster="/assets/media/{{ m.poster }}"{% endif %} muted loop playsinline preload="{{ 'auto' if loop.first else 'none' }}"></video>{% elif m %}<img src="/assets/media/{{ m.src }}" alt=""{% if not loop.first %} loading="lazy"{% endif %}>{% else %}<span class="serif">{{ c.label }}</span>{% endif %}</div>
+{% endfor %}
 </div>
+<ol class="story-index" aria-hidden="true">{% for c in L.story %}<li data-i="{{ loop.index0 }}"{% if loop.first %} class="on"{% endif %}>{{ c.label }}</li>{% endfor %}</ol>
+{% for c in L.story %}{% set m = media(S.story_media[c.key]) %}
+<article class="ss{% if not m %} light{% endif %}" data-i="{{ loop.index0 }}">
+<div class="wrap ss-c">
+{% if loop.first %}<p class="eyebrow caps">{{ L.hero.eyebrow }}</p><h1 class="serif">{{ L.hero.h1 }}</h1><p class="ss-p">{{ L.hero.lead }}</p><p class="ss-n">01 / {{ L.story|length }} · {{ c.label }} — {{ c.h }}</p><p class="cue">{{ L.story_ui.scroll }} ↓</p>
+{% else %}<p class="ss-n">{{ '%02d' % loop.index }} / {{ L.story|length }} · {{ c.label }}</p><h2 class="serif">{{ c.h }}</h2><p class="ss-p">{{ c.p }}</p>{% if loop.last %}<div class="actions"><a href="#rfq" class="btn btn-red">{{ L.hero.cta_talk }}</a><a href="#products" class="u">{{ L.hero.cta_collections }}</a></div>{% endif %}{% endif %}
 </div>
-<figure class="hero-media">
-<video id="hero-video" src="/assets/media/fabric.mp4" poster="/assets/media/fabric-poster.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video>
-<button type="button" id="hero-toggle" class="vid-ctl" data-play="{{ L.hero.play }}" data-pause="{{ L.hero.pause }}">{{ L.hero.pause }}</button>
-</figure>
-</div>
+</article>
+{% endfor %}
 </section>
 
 <section id="products" class="sec">
@@ -37,23 +34,6 @@
 {% endfor %}
 </div>
 <p class="coll-foot"><a class="u" href="#rfq">{{ L.collections.custom }}</a></p>
-</div>
-</section>
-
-<section id="craft" class="sec paper2">
-<div class="wrap">
-<div class="sec-head">
-<p class="eyebrow">{{ L.craft.eyebrow }}</p>
-<h2 class="h2 serif">{{ L.craft.h }}</h2>
-<p class="lead">{{ L.craft.intro }}</p>
-</div>
-{% set ci = L.craft['items'] %}
-<div class="craft">
-<figure class="cr cr-1"><img src="/assets/media/fabric-poster.jpg" alt="{{ ci[0][0] }}" loading="lazy"><figcaption><b>{{ ci[0][0] }}</b>{{ ci[0][1] }}</figcaption></figure>
-<figure class="cr cr-2"><video data-loop src="/assets/media/stitch.mp4" poster="/assets/media/stitch-poster.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video><figcaption><b>{{ ci[1][0] }}</b>{{ ci[1][1] }}</figcaption></figure>
-<figure class="cr cr-3"><img src="/assets/media/monogram.jpg" alt="{{ ci[2][0] }}" loading="lazy"><figcaption><b>{{ ci[2][0] }}</b>{{ ci[2][1] }}</figcaption></figure>
-<figure class="cr cr-4"><img src="/assets/media/towel.jpg" alt="{{ ci[3][0] }}" loading="lazy"><figcaption><b>{{ ci[3][0] }}</b>{{ ci[3][1] }}</figcaption></figure>
-</div>
 </div>
 </section>
 
@@ -92,11 +72,6 @@
 <ol class="tline">{% for y, h, p in L.heritage.timeline %}<li><span class="y serif">{{ y }}</span><div><b>{{ h }}</b><p>{{ p }}</p></div></li>{% endfor %}</ol>
 </div>
 </div>
-</section>
-
-<section class="closing">
-<img src="/assets/media/baby-muslin-hero.jpg" alt="" loading="lazy">
-<div class="wrap closing-c"><h2 class="serif">{{ L.closing.h }}</h2><a href="#rfq" class="btn btn-paper">{{ L.closing.cta }}</a></div>
 </section>
 
 <section id="planner" class="sec">

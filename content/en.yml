@@ -455,3 +455,35 @@ request:
 closing:
   h: Your next collection starts here.
   cta: Let’s talk about your project
+story:
+- key: cotton
+  label: Cotton
+  h: It all starts with a fibre.
+  p: Aegean cotton, Denizli’s textile know-how. Every piece we make starts with the right fibre.
+- key: yarn
+  label: Yarn
+  h: Fibre becomes yarn.
+  p: A fabric’s hand lies in the fineness of its yarn. We choose the right yarn and fabric for your collection together.
+- key: fabric
+  label: Fabric
+  h: Yarn becomes fabric.
+  p: Terry, muslin, jersey, canvas. We approve your product’s fabric with a sample.
+- key: sewing
+  label: Cutting & sewing
+  h: Pattern, cut, stitch.
+  p: Fabric is planned to the pattern and gaps are put to use; every stitch to the approved sample’s standard.
+- key: embroidery
+  label: Embroidery
+  h: Your signature, in thread.
+  p: Logos, monograms and borders, stitched in our own atelier.
+- key: product
+  label: Product
+  h: And your brand’s product.
+  p: Your label, your packaging, ready to ship. From home textiles to babywear, from hoodies to pencil cases.
+- key: brand
+  label: Your turn
+  h: Now it’s your design.
+  p: Send your R&D file, sketch or a sample product; we’ll make the sample as fast as possible.
+story_ui:
+  scroll: Scroll
+  from: From cotton to product

@@ -17,7 +17,16 @@ company:
 # Teklif formunun gideceği adres (ör. Formspree). Boşsa form gönderimde teşekkür mesajı gösterir ama e-posta iletmez.
 form_endpoint: ""
 
-# Açılış videosu: assets/media/fabric.mp4 (kapak görseli fabric-poster.jpg). Değiştirmek için aynı adla yeni dosya yükleyin.
+# Açılış hikâyesi: sayfa kaydırıldıkça sırayla değişen tam ekran sahneler.
+# Her sahne için assets/media içine aşağıdaki adla bir görsel (.jpg) ya da video (.mp4) koyun; dosya yoksa sahne yazıyla gösterilir.
+story_media:
+  cotton: cotton
+  yarn: yarn
+  fabric: fabric
+  sewing: sewing
+  embroidery: stitch
+  product: baby-muslin-hero
+  brand: towel
 
 # Ürün grupları: sıralama burada. img boşsa doku yer tutucusu görünür.
 products:

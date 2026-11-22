@@ -19,7 +19,15 @@ def purl(lang, key):
 
 
 env = Environment(loader=FileSystemLoader(os.path.join(ROOT, "src", "templates")), autoescape=select_autoescape(default=True))
-env.globals.update(S=S, purl=purl)
+def media(name):
+    for ext, kind in (("mp4", "video"), ("jpg", "image")):
+        if os.path.exists(os.path.join(ROOT, "assets", "media", f"{name}.{ext}")):
+            poster = f"{name}-poster.jpg" if kind == "video" and os.path.exists(os.path.join(ROOT, "assets", "media", f"{name}-poster.jpg")) else None
+            return {"kind": kind, "src": f"{name}.{ext}", "poster": poster}
+    return None
+
+
+env.globals.update(S=S, purl=purl, media=media)
 
 ORG = {"@context": "https://schema.org", "@type": "Organization", "name": S["brand"], "url": S["base_url"],
        "email": S["company"]["email"], "telephone": S["company"]["phone"],

@@ -21,6 +21,26 @@
     if (ht) ht.addEventListener("click", function () { if (hv.paused) play(hv); else hv.pause(); });
   }
 
+  // scroll story: swap the sticky media as each chapter enters
+  var st = $("[data-story]");
+  if (st) {
+    var layers = $$(".sm", st), idx = $$(".story-index li", st), steps = $$(".ss", st);
+    var set = function (i) {
+      layers.forEach(function (l, j) {
+        var on = j === i; l.classList.toggle("on", on);
+        var v = $("video", l);
+        if (v) { if (on && !reduce) { v.preload = "auto"; play(v); } else v.pause(); }
+      });
+      idx.forEach(function (l, j) { l.classList.toggle("on", j === i); });
+      st.classList.toggle("light-on", steps[i] && steps[i].classList.contains("light"));
+    };
+    if ("IntersectionObserver" in window) {
+      var so = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) set(+e.target.dataset.i); }); }, { rootMargin: "-45% 0px -45% 0px" });
+      steps.forEach(function (s) { so.observe(s); });
+    }
+    set(0);
+  }
+
   // other looping videos: play only while visible
   var loops = $$("video[data-loop]");
   if (!reduce && loops.length) {

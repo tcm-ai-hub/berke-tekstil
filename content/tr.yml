@@ -455,3 +455,35 @@ request:
 closing:
   h: Bir sonraki koleksiyonunuz burada başlar.
   cta: Projenizi konuşalım
+story:
+- key: cotton
+  label: Pamuk
+  h: Her şey bir lifle başlar.
+  p: Ege’nin pamuğu, Denizli’nin tekstil birikimi. Ürettiğimiz her parçanın hikâyesi doğru lifle başlar.
+- key: yarn
+  label: İplik
+  h: Lif, ipliğe dönüşür.
+  p: Kumaşın tutumu ipliğin inceliğinde saklıdır. Koleksiyonunuz için doğru iplik ve kumaşı birlikte seçeriz.
+- key: fabric
+  label: Kumaş
+  h: İplik, kumaşa.
+  p: Havlu, müslin, penye, kanvas. Ürününüzün kumaşını numuneyle onaylarız.
+- key: sewing
+  label: Kesim ve dikim
+  h: Kalıp, kesim, dikiş.
+  p: Kumaş kalıba göre planlanır, boşluklar değerlendirilir; her dikiş onaylı numunenin standardında.
+- key: embroidery
+  label: Nakış
+  h: İmzanız, iplikle.
+  p: Logo, monogram ve bordür kendi atölyemizde işlenir.
+- key: product
+  label: Ürün
+  h: Ve markanızın ürünü.
+  p: Etiketiniz, ambalajınız, sevkiyata hazır. Ev tekstilinden bebek giyime, hoodie’den kalemliğe.
+- key: brand
+  label: Sıra sizde
+  h: Sıra sizin tasarımınızda.
+  p: Ar-Ge dosyanızı, çiziminizi ya da örnek ürününüzü gönderin; numunesini en kısa sürede çıkaralım.
+story_ui:
+  scroll: Kaydırın
+  from: Pamuktan ürüne
