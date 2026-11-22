@@ -582,25 +582,25 @@ scroll:
 journey:
   scenes:
   - label: Pamuk
+    text: Her şey bir pamuk lifiyle başlar.
+  - label: Hasat
     text: 'Özenle yetişir.
 
       Sabırla toplanır.'
   - label: Lif
-    text: 'Lif ayrılır, temizlenir
+    text: 'Lif temizlenir,
 
-      ve hazırlanır.'
+      ipliğe hazırlanır.'
   - label: İplik
     text: Lif, ipliğe dönüşür.
   - label: Kumaş
     text: İplik, kumaşa dönüşür.
   - label: Üretim
-    text: 'Kesilir, dikilir,
+    text: 'Kumaş, markanız için
 
-      özenle işlenir.'
+      şekillenir.'
   - label: Ürün
-    text: 'Son dokunuş,
-
-      markanızın imzası.'
+    text: Pamuktan markanıza.
   final: Pamuktan markanıza.
   cta: Projenizi konuşalım
   scroll: Kaydırın

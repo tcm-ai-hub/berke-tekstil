@@ -582,25 +582,25 @@ scroll:
 journey:
   scenes:
   - label: Cotton
+    text: It all starts with a cotton fibre.
+  - label: Harvest
     text: 'Grown with care.
 
       Harvested with patience.'
   - label: Fibre
-    text: 'Fibre is opened, cleaned
+    text: 'Fibre is cleaned
 
-      and prepared.'
+      and prepared for spinning.'
   - label: Yarn
     text: Fibre becomes yarn.
   - label: Fabric
     text: Yarn becomes fabric.
   - label: Production
-    text: 'Cut, sewn
+    text: 'Fabric takes shape
 
-      and finished with care.'
+      for your brand.'
   - label: Product
-    text: 'The final touch,
-
-      your brand’s signature.'
+    text: From cotton to your brand.
   final: From cotton to your brand.
   cta: Let’s talk about your project
   scroll: Scroll

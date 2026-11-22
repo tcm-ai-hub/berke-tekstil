@@ -17,7 +17,7 @@
 <div class="jy-copy">
 <p class="jy-n">{{ '%02d' % loop.index }} / {{ '%02d' % N }} · {{ sc.label }}</p>
 <p class="jy-t serif">{{ sc.text|replace('\n','<br>')|safe }}</p>
-{% if loop.last %}<p class="jy-t jy-final serif">{{ L.journey.final }}</p><a href="#rfq" class="btn btn-paper jy-cta">{{ L.journey.cta }}</a>{% endif %}
+{% if loop.last %}<a href="#rfq" class="btn btn-paper jy-cta">{{ L.journey.cta }}</a>{% endif %}
 </div>
 </div>
 {% endfor %}
@@ -34,7 +34,7 @@
 <p class="lead">{{ X.intro }}</p>
 <div class="actions"><a href="#products" class="btn btn-ink">{{ L.hero.cta_collections }}</a><a href="#rfq" class="u">{{ L.hero.cta_talk }}</a></div>
 </div>
-<video data-loop src="/assets/media/fabric.mp4" poster="/assets/media/fabric-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
+<img class="lx-hero-img" src="/assets/media/fiber.jpg" alt="">
 </section>
 
 <section class="lx-facts">

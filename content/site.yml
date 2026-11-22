@@ -17,16 +17,19 @@ company:
 # Teklif formunun gideceği adres (ör. Formspree). Boşsa form gönderimde teşekkür mesajı gösterir ama e-posta iletmez.
 form_endpoint: ""
 
-# Açılış yolculuğu (6 sahne). Gerçek çekimleri assets/media/story/ klasörüne bu adlarla koyun:
-#   01-pamuk · 02-lif · 03-iplik · 04-kumas · 05-uretim · 06-urun   (.mp4 video ya da .jpg görsel; videoya aynı adla -poster.jpg ekleyin)
-# Dosya yoksa "fallback" kullanılır; o da yoksa sahne zarif bir yazı paneliyle gösterilir (boş/bozuk alan olmaz).
+# Açılış yolculuğu (7 sahne). Gerçek çekimleri assets/media/story/ klasörüne bu adlarla koyun:
+#   01-tarla · 02-hasat · 03-lif · 04-iplik · 05-kumas · 06-uretim · 07-urun
+#   (.mp4 video ya da .jpg görsel; videoya aynı adla -poster.jpg ekleyin)
+# Dosya yoksa "fallback" kullanılır; o da yoksa sahne marka renginde yazı paneliyle gösterilir (boş/bozuk alan olmaz).
+# Aynı görseli iki sahnede kullanmayın.
 journey:
-  - { file: story/01-pamuk,  fallback: cotton }
-  - { file: story/02-lif,    fallback: fiber }
-  - { file: story/03-iplik,  fallback: yarn }
-  - { file: story/04-kumas,  fallback: "" }
-  - { file: story/05-uretim, fallback: stitch }
-  - { file: story/06-urun,   fallback: baby-muslin-hero }
+  - { file: story/01-tarla,  fallback: cotton }
+  - { file: story/02-hasat,  fallback: "" }
+  - { file: story/03-lif,    fallback: fiber }
+  - { file: story/04-iplik,  fallback: yarn }
+  - { file: story/05-kumas,  fallback: "" }
+  - { file: story/06-uretim, fallback: stitch }
+  - { file: story/07-urun,   fallback: baby-muslin-hero }
 
 # Ürün grupları: sıralama burada. img boşsa doku yer tutucusu görünür.
 products:

@@ -50,7 +50,7 @@
         var jo = new IntersectionObserver(function (es) { es.forEach(function (e) { var v = loadVid(e.target); if (v) { if (e.isIntersecting) play(v); else v.pause(); } }); }, { rootMargin: "200px 0px" });
         scenes.forEach(function (s2) { jo.observe(s2); });
       } else scenes.forEach(loadVid);
-      if (hdr) addEventListener("scroll", function () { hdr.classList.toggle("solid", jy.getBoundingClientRect().bottom < 80); }, { passive: true });
+      if (hdr) hdr.classList.add("solid");
     } else {
       jy.classList.add("live"); jy.style.setProperty("--n", N + 0.6);
       var raf = 0, cur = -1;

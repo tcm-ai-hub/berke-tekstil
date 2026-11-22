@@ -442,4 +442,3 @@ body{font-weight:300}
 @media (max-width:900px){.jy-scene{height:78vh;min-height:460px}.jy-copy{left:20px;right:20px;width:auto;bottom:9vh}.jy-t{font-size:28px}}
 .home .site-h.on-light:not(.solid) .logo,.home .site-h.on-light:not(.solid) .logo span,.home .site-h.on-light:not(.solid) .nav a,.home .site-h.on-light:not(.solid) .langs a,.home .site-h.on-light:not(.solid) .menu-btn{color:var(--ink)}
 .home .site-h.on-light:not(.solid) .talk{color:var(--red)}
-.lx-hero video{width:100%;aspect-ratio:4/5;object-fit:cover}
