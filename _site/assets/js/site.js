@@ -54,7 +54,7 @@
           cur = idx; scenes.forEach(function (el, i) { el.classList.toggle("on", i === idx); });
           if (count) count.textContent = ("0" + (idx + 1)).slice(-2) + " / " + ("0" + N).slice(-2);
         }
-        if (bar) bar.style.width = (p * 100).toFixed(1) + "%";
+        if (bar) jy.style.setProperty("--p", p.toFixed(4));
         if (cue) cue.style.opacity = clamp(1 - x * 3);
         if (hdr) hdr.classList.toggle("solid", r.bottom < 80);
         target = timeAt(x);
