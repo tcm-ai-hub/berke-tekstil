@@ -17,16 +17,16 @@ company:
 # Teklif formunun gideceği adres (ör. Formspree). Boşsa form gönderimde teşekkür mesajı gösterir ama e-posta iletmez.
 form_endpoint: ""
 
-# Açılış hikâyesi: sayfa kaydırıldıkça sırayla değişen tam ekran sahneler.
-# Her sahne için assets/media içine aşağıdaki adla bir görsel (.jpg) ya da video (.mp4) koyun; dosya yoksa sahne yazıyla gösterilir.
-story_media:
-  cotton: cotton
-  yarn: yarn
-  fabric: fabric
-  sewing: sewing
-  embroidery: stitch
-  product: baby-muslin-hero
-  brand: towel
+# Açılış yolculuğu (6 sahne). Gerçek çekimleri assets/media/story/ klasörüne bu adlarla koyun:
+#   01-pamuk · 02-lif · 03-iplik · 04-kumas · 05-uretim · 06-urun   (.mp4 video ya da .jpg görsel; videoya aynı adla -poster.jpg ekleyin)
+# Dosya yoksa "fallback" kullanılır; o da yoksa sahne zarif bir yazı paneliyle gösterilir (boş/bozuk alan olmaz).
+journey:
+  - { file: story/01-pamuk,  fallback: cotton }
+  - { file: story/02-lif,    fallback: fiber }
+  - { file: story/03-iplik,  fallback: yarn }
+  - { file: story/04-kumas,  fallback: "" }
+  - { file: story/05-uretim, fallback: stitch }
+  - { file: story/06-urun,   fallback: baby-muslin-hero }
 
 # Ürün grupları: sıralama burada. img boşsa doku yer tutucusu görünür.
 products:

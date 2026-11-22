@@ -579,3 +579,28 @@ scroll:
   size ulaşır.
 
   Pamuktan markanıza.'
+journey:
+  scenes:
+  - label: Pamuk
+    text: 'Özenle yetişir.
+
+      Sabırla toplanır.'
+  - label: Lif
+    text: 'Lif ayrılır, temizlenir
+
+      ve hazırlanır.'
+  - label: İplik
+    text: Lif, ipliğe dönüşür.
+  - label: Kumaş
+    text: İplik, kumaşa dönüşür.
+  - label: Üretim
+    text: 'Kesilir, dikilir,
+
+      özenle işlenir.'
+  - label: Ürün
+    text: 'Son dokunuş,
+
+      markanızın imzası.'
+  final: Pamuktan markanıza.
+  cta: Projenizi konuşalım
+  scroll: Kaydırın

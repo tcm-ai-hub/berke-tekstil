@@ -579,3 +579,28 @@ scroll:
   under your own label.
 
   From cotton to your brand.'
+journey:
+  scenes:
+  - label: Cotton
+    text: 'Grown with care.
+
+      Harvested with patience.'
+  - label: Fibre
+    text: 'Fibre is opened, cleaned
+
+      and prepared.'
+  - label: Yarn
+    text: Fibre becomes yarn.
+  - label: Fabric
+    text: Yarn becomes fabric.
+  - label: Production
+    text: 'Cut, sewn
+
+      and finished with care.'
+  - label: Product
+    text: 'The final touch,
+
+      your brand’s signature.'
+  final: From cotton to your brand.
+  cta: Let’s talk about your project
+  scroll: Scroll

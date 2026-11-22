@@ -20,6 +20,8 @@ def purl(lang, key):
 
 env = Environment(loader=FileSystemLoader(os.path.join(ROOT, "src", "templates")), autoescape=select_autoescape(default=True))
 def media(name):
+    if not name:
+        return None
     for ext, kind in (("mp4", "video"), ("jpg", "image")):
         if os.path.exists(os.path.join(ROOT, "assets", "media", f"{name}.{ext}")):
             poster = f"{name}-poster.jpg" if kind == "video" and os.path.exists(os.path.join(ROOT, "assets", "media", f"{name}-poster.jpg")) else None

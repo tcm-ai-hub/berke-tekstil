@@ -3,16 +3,26 @@
 {% set F = L.film %}{% set X = L.lux %}
 {% block bodyclass %}home{% endblock %}
 {% block main %}
-<section class="scrolly" data-scrolly>
-<div class="sc-sticky">
-<div class="sc-layer sc-cotton on" data-i="0"><img src="/assets/media/cotton.jpg" alt="" data-cotton></div>
-<svg class="sc-threads" aria-hidden="true"></svg>
-<div class="sc-layer" data-i="1"><img src="/assets/media/yarn.jpg" alt=""></div>
-<div class="sc-layer" data-i="2"><video src="/assets/media/fabric.mp4" poster="/assets/media/fabric-poster.jpg" muted loop playsinline preload="metadata"></video></div>
-<div class="sc-layer" data-i="3"><video src="/assets/media/stitch.mp4" poster="/assets/media/stitch-poster.jpg" muted loop playsinline preload="metadata"></video></div>
-<div class="sc-layer" data-i="4"><img src="/assets/media/baby-muslin-hero.jpg" alt=""></div>
-<div class="sc-text">{% for t in L.scroll %}<p class="serif" data-i="{{ loop.index0 }}">{{ t|replace('\n','<br>')|safe }}</p>{% endfor %}</div>
-<p class="sc-cue">{{ L.story_ui.scroll }} ↓</p>
+<section class="journey" data-journey aria-label="{{ L.journey.final }}">
+<div class="jy-stage">
+{% set N = S.journey|length %}
+{% for j in S.journey %}{% set sc = L.journey.scenes[loop.index0] %}{% set m = media(j.file) or (j.fallback and media(j.fallback)) %}
+<div class="jy-scene{% if loop.first %} on{% endif %}" data-i="{{ loop.index0 }}">
+<div class="jy-media{% if not m %} jy-type{% endif %}">
+{% if m and m.kind == 'video' %}<video data-src="/assets/media/{{ m.src }}"{% if m.poster %} poster="/assets/media/{{ m.poster }}"{% endif %} muted loop playsinline preload="none" aria-hidden="true"></video>
+{% elif m %}<img src="/assets/media/{{ m.src }}" alt="" {% if loop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+{% else %}<span class="serif" aria-hidden="true">{{ sc.label }}</span>{% endif %}
+{% if loop.first %}<svg class="jy-threads" aria-hidden="true"></svg>{% endif %}
+</div>
+<div class="jy-copy">
+<p class="jy-n">{{ '%02d' % loop.index }} / {{ '%02d' % N }} · {{ sc.label }}</p>
+<p class="jy-t serif">{{ sc.text|replace('\n','<br>')|safe }}</p>
+{% if loop.last %}<p class="jy-t jy-final serif">{{ L.journey.final }}</p><a href="#rfq" class="btn btn-paper jy-cta">{{ L.journey.cta }}</a>{% endif %}
+</div>
+</div>
+{% endfor %}
+<div class="jy-progress" aria-hidden="true"><span class="jy-count">01 / {{ '%02d' % N }}</span><span class="jy-bar"><i></i></span></div>
+<p class="jy-cue">{{ L.journey.scroll }} ↓</p>
 </div>
 </section>
 
@@ -24,7 +34,7 @@
 <p class="lead">{{ X.intro }}</p>
 <div class="actions"><a href="#products" class="btn btn-ink">{{ L.hero.cta_collections }}</a><a href="#rfq" class="u">{{ L.hero.cta_talk }}</a></div>
 </div>
-<img class="lx-hero-img" src="/assets/media/fiber.jpg" alt="">
+<video data-loop src="/assets/media/fabric.mp4" poster="/assets/media/fabric-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
 </section>
 
 <section class="lx-facts">
