@@ -21,7 +21,7 @@
 <script type="application/ld+json">{{ org_ld|safe }}</script>
 {% block head %}{% endblock %}
 </head>
-<body>
+<body class="{% block bodyclass %}{% endblock %}">
 <a class="skip" href="#main">{{ L.ui.skip }}</a>
 <header class="site-h">
 <div class="wrap bar">

@@ -21,6 +21,50 @@
     if (ht) ht.addEventListener("click", function () { if (hv.paused) play(hv); else hv.pause(); });
   }
 
+  // scroll-driven cotton → yarn → product
+  var sy = $("[data-scrolly]");
+  if (sy) {
+    var layers = $$(".sc-layer", sy), texts = $$(".sc-text p", sy), svg = $(".sc-threads", sy), cot = $("[data-cotton]", sy), cue = $(".sc-cue", sy);
+    var hdr = $(".site-h"), N = layers.length, lines = [], seeded = 0;
+    var rnd = function () { seeded = (seeded * 9301 + 49297) % 233280; return seeded / 233280; };
+    var build = function () {
+      var W = innerWidth, H = innerHeight, iw = 736, ih = 1103;
+      var sc = Math.min(W / iw, H / ih), dw = iw * sc, dh = ih * sc, ox = (W - dw) / 2, oy = (H - dh) / 2;
+      var cx = ox + dw * 0.46, cy = oy + dh * 0.60;   // lower cotton boll
+      svg.setAttribute("viewBox", "0 0 " + W + " " + H); svg.innerHTML = ""; lines = []; seeded = 7;
+      for (var k = 0; k < 46; k++) {
+        var tx = W * (0.08 + rnd() * 0.84), ty = -10 + rnd() * H * 0.08;
+        var sx = cx + (rnd() - 0.5) * dw * 0.22, s2 = cy + (rnd() - 0.5) * dh * 0.08;
+        var l = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        l.setAttribute("x1", sx); l.setAttribute("y1", s2); l.setAttribute("x2", tx); l.setAttribute("y2", ty);
+        var len = Math.hypot(tx - sx, ty - s2); l.style.strokeDasharray = len; l.style.strokeDashoffset = len;
+        svg.appendChild(l); lines.push([l, len, rnd() * 0.35]);
+      }
+    };
+    var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };
+    var last = -1;
+    var update = function () {
+      var r = sy.getBoundingClientRect(), H = innerHeight;
+      var p = clamp(-r.top / (sy.offsetHeight - H)), x = p * N;
+      layers.forEach(function (el, i) {
+        var o = i === 0 ? clamp((1.25 - x) / 0.35) : clamp((0.62 - Math.abs(x - i - 0.5)) / 0.24);
+        if (i === N - 1 && x > N - 0.5) o = 1;
+        el.style.opacity = o;
+        var v = $("video", el); if (v) { if (o > 0.3 && !reduce) { if (v.paused) play(v); } else if (!v.paused) v.pause(); }
+      });
+      var t = clamp(x / 0.95);
+      lines.forEach(function (a) { var q = clamp((t - a[2]) / (1 - a[2])); a[0].style.strokeDashoffset = a[1] * (1 - q); });
+      svg.style.opacity = clamp((1.3 - x) / 0.3);
+      texts.forEach(function (el, i) { el.style.opacity = clamp((0.45 - Math.abs(x - i - 0.5)) / 0.18); el.style.transform = "translateY(" + ((x - i - 0.5) * -24).toFixed(1) + "px)"; });
+      if (cue) cue.style.opacity = clamp(1 - x * 3);
+      if (hdr) hdr.classList.toggle("solid", r.bottom < 80);
+    };
+    var onScroll = function () { if (last) cancelAnimationFrame(last); last = requestAnimationFrame(update); };
+    build(); update();
+    addEventListener("scroll", onScroll, { passive: true });
+    addEventListener("resize", function () { build(); update(); });
+  }
+
   // opening film: auto-advancing scenes cotton → product
   var fm = $("[data-film]");
   if (fm) {
