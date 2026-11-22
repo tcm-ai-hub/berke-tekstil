@@ -21,69 +21,54 @@
     if (ht) ht.addEventListener("click", function () { if (hv.paused) play(hv); else hv.pause(); });
   }
 
-  // journey: scroll-driven scenes on desktop; static stacked on mobile / reduced motion
+  // journey: one film scrubbed by scroll on desktop; stacked stills on mobile / reduced motion
   var jy = $("[data-journey]");
   if (jy) {
     var scenes = $$(".jy-scene", jy), N = scenes.length, hdr = $(".site-h");
-    var count = $(".jy-count", jy), bar = $(".jy-bar i", jy), cue = $(".jy-cue", jy), svg = $(".jy-threads", jy);
+    var count = $(".jy-count", jy), bar = $(".jy-bar i", jy), cue = $(".jy-cue", jy), film = $(".jy-film", jy);
+    var cuts = (jy.dataset.cuts || "").split(",").map(Number);
     var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };
-    var loadVid = function (sc) { var v = $("video", sc); if (v && !v.src && v.dataset.src) v.src = v.dataset.src; return v; };
-    var live = !reduce && matchMedia("(min-width: 901px)").matches;
-    var lines = [];
-    var threads = function () {
-      if (!svg) return; var img = $("img", scenes[0]); if (!img) return;
-      var W = innerWidth, H = innerHeight, iw = img.naturalWidth || 736, ih = img.naturalHeight || 1103;
-      var sc = Math.min(W / iw, H / ih), dw = iw * sc, dh = ih * sc, ox = (W - dw) / 2, oy = (H - dh) / 2;
-      var cx = ox + dw * 0.46, cy = oy + dh * 0.60, seed = 7, rnd = function () { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
-      svg.setAttribute("viewBox", "0 0 " + W + " " + H); svg.innerHTML = ""; lines = [];
-      for (var k = 0; k < 40; k++) {
-        var tx = W * (0.1 + rnd() * 0.8), ty = -10 + rnd() * H * 0.06, sx = cx + (rnd() - 0.5) * dw * 0.2, sy2 = cy + (rnd() - 0.5) * dh * 0.07;
-        var l = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        l.setAttribute("x1", sx); l.setAttribute("y1", sy2); l.setAttribute("x2", tx); l.setAttribute("y2", ty);
-        var len = Math.hypot(tx - sx, ty - sy2); l.style.strokeDasharray = len; l.style.strokeDashoffset = len;
-        svg.appendChild(l); lines.push([l, len, rnd() * 0.4]);
-      }
-    };
-    if (!live) {
-      // static: play videos only while visible
-      if (!reduce && "IntersectionObserver" in window) {
-        var jo = new IntersectionObserver(function (es) { es.forEach(function (e) { var v = loadVid(e.target); if (v) { if (e.isIntersecting) play(v); else v.pause(); } }); }, { rootMargin: "200px 0px" });
-        scenes.forEach(function (s2) { jo.observe(s2); });
-      } else scenes.forEach(loadVid);
-      if (hdr) hdr.classList.add("solid");
-    } else {
-      jy.classList.add("live"); jy.style.setProperty("--n", N + 0.6);
-      var raf = 0, cur = -1;
+    var live = !reduce && matchMedia("(min-width: 901px)").matches && film && cuts.length === N + 1;
+    if (!live) { if (hdr) hdr.classList.add("solid"); }
+    else {
+      jy.classList.add("live"); jy.style.setProperty("--n", N + 0.5);
+      film.preload = "auto"; film.src = film.dataset.src;
+      film.addEventListener("error", function () { jy.classList.add("no-film"); });
+      var raf = 0, cur = -1, target = 0, shown = 0, ready = false;
+      film.addEventListener("loadeddata", function () { ready = true; film.pause(); req(); });
+      var timeAt = function (x) {
+        var i = Math.min(N - 1, Math.floor(x)), f = clamp(x - i), s0 = cuts[i] + 0.04, s1 = cuts[i + 1] - 0.06;
+        return s0 + (s1 - s0) * f;
+      };
       var update = function () {
         raf = 0;
         var r = jy.getBoundingClientRect(), H = innerHeight, p = clamp(-r.top / (jy.offsetHeight - H)), x = p * N;
         var idx = Math.min(N - 1, Math.floor(x));
         scenes.forEach(function (el, i) {
-          var o = i === 0 ? clamp((1.3 - x) / 0.3) : i === N - 1 ? clamp((x - i + 0.3) / 0.3) : clamp((0.65 - Math.abs(x - i - 0.5)) / 0.15);
+          var o = i === 0 ? clamp((0.8 - x) / 0.25) : i === N - 1 ? clamp((x - i + 0.05) / 0.25) : clamp((0.42 - Math.abs(x - i - 0.5)) / 0.17);
           el.style.opacity = o;
-          var local = clamp(x - i + 0.3) ;
-          var m = $(".jy-media", el); if (m) m.style.transform = "scale(" + (1.07 - 0.07 * clamp(local / 1.3)).toFixed(4) + ")";
-          var c = $(".jy-copy", el); if (c) c.style.transform = "translateY(" + ((0.5 - clamp(local / 1.3)) * 36).toFixed(1) + "px)";
-          if (Math.abs(x - i - 0.5) < 1.2) { var v = loadVid(el); if (v) { if (o > 0.2) { if (v.paused) play(v); } else if (!v.paused) v.pause(); } }
-          else { var v2 = $("video", el); if (v2 && !v2.paused) v2.pause(); }
+          var c = $(".jy-copy", el); if (c) c.style.transform = "translate(-50%," + ((i + 0.5 - x) * 40).toFixed(1) + "px)";
+          if (jy.classList.contains("no-film")) { var m = $(".jy-media", el); if (m) m.style.opacity = i === idx ? 1 : 0; }
         });
         if (idx !== cur) {
           cur = idx; scenes.forEach(function (el, i) { el.classList.toggle("on", i === idx); });
           if (count) count.textContent = ("0" + (idx + 1)).slice(-2) + " / " + ("0" + N).slice(-2);
-          var lt = !!$(".jy-type", scenes[idx]); jy.classList.toggle("dark-ui", lt); if (hdr) hdr.classList.toggle("on-light", lt);
         }
         if (bar) bar.style.width = (p * 100).toFixed(1) + "%";
-        var t = clamp(x / 0.9);
-        lines.forEach(function (a) { var q = clamp((t - a[2]) / (1 - a[2])); a[0].style.strokeDashoffset = a[1] * (1 - q); });
         if (cue) cue.style.opacity = clamp(1 - x * 3);
         if (hdr) hdr.classList.toggle("solid", r.bottom < 80);
+        target = timeAt(x);
+        if (ready) {
+          shown += (target - shown) * 0.22;
+          if (Math.abs(target - shown) < 0.01) shown = target;
+          if (Math.abs(film.currentTime - shown) > 0.015) film.currentTime = shown;
+          if (shown !== target) req();
+        }
       };
       var req = function () { if (!raf) raf = requestAnimationFrame(update); };
-      var img0 = $("img", scenes[0]);
-      if (img0 && !img0.complete) img0.addEventListener("load", function () { threads(); req(); });
-      threads(); update();
+      update();
       addEventListener("scroll", req, { passive: true });
-      addEventListener("resize", function () { threads(); req(); });
+      addEventListener("resize", req);
     }
   }
 

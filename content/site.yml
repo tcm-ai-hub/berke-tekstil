@@ -22,14 +22,16 @@ form_endpoint: ""
 #   (.mp4 video ya da .jpg görsel; videoya aynı adla -poster.jpg ekleyin)
 # Dosya yoksa "fallback" kullanılır; o da yoksa sahne marka renginde yazı paneliyle gösterilir (boş/bozuk alan olmaz).
 # Aynı görseli iki sahnede kullanmayın.
+journey_film: story/journey.mp4
+journey_cuts: [0, 1.29, 2.667, 4, 5.292, 6.625, 8, 10]
 journey:
-  - { file: story/01-tarla,  fallback: cotton }
-  - { file: story/02-hasat,  fallback: "" }
-  - { file: story/03-lif,    fallback: fiber }
-  - { file: story/04-iplik,  fallback: yarn }
-  - { file: story/05-kumas,  fallback: "" }
-  - { file: story/06-uretim, fallback: stitch }
-  - { file: story/07-urun,   fallback: baby-muslin-hero }
+  - { file: story/s01, fallback: "" }
+  - { file: story/s02, fallback: "" }
+  - { file: story/s03, fallback: "" }
+  - { file: story/s04, fallback: "" }
+  - { file: story/s05, fallback: "" }
+  - { file: story/s06, fallback: "" }
+  - { file: story/s07, fallback: "" }
 
 # Ürün grupları: sıralama burada. img boşsa doku yer tutucusu görünür.
 products:

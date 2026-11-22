@@ -15,9 +15,9 @@
 <meta property="og:image" content="https://berketekstil.com/assets/media/fabric-poster.jpg">
 <meta name="theme-color" content="#F6F3EE">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fonts.css">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Berke Tekstil", "url": "https://berketekstil.com", "email": "info@berketekstil.com", "telephone": "+90 530 540 87 95", "address": {"@type": "PostalAddress", "streetAddress": "Akçeşme Mah. 2608 Sk. No:5, Merkezefendi, Denizli, Türkiye", "addressCountry": "TR"}}</script>
 
@@ -43,101 +43,76 @@
 </header>
 <main id="main">
 
-<section class="journey" data-journey aria-label="From cotton to your brand.">
+<section class="journey" data-journey data-cuts="0,1.29,2.667,4,5.292,6.625,8,10" aria-label="From cotton to your brand.">
 <div class="jy-stage">
 
+<video class="jy-film" data-src="/assets/media/story/journey.mp4" poster="/assets/media/story/s01.jpg" muted playsinline preload="none" aria-hidden="true"></video>
 
 <div class="jy-scene on" data-i="0">
-<div class="jy-media">
-<img src="/assets/media/cotton.jpg" alt="" fetchpriority="high">
-
-<svg class="jy-threads" aria-hidden="true"></svg>
-</div>
+<div class="jy-media"><img src="/assets/media/story/s01.jpg" alt="" fetchpriority="high"></div>
 <div class="jy-copy">
-<p class="jy-n">01 / 07 · Cotton</p>
-<p class="jy-t serif">It all starts with a cotton fibre.</p>
+<p class="jy-n">01 — Cotton</p>
+<p class="jy-t">It all starts with a cotton fibre.</p>
 
 </div>
 </div>
 
 <div class="jy-scene" data-i="1">
-<div class="jy-media jy-type">
-<span class="serif" aria-hidden="true">Harvest</span>
-
-</div>
+<div class="jy-media"><img src="/assets/media/story/s02.jpg" alt="" loading="lazy"></div>
 <div class="jy-copy">
-<p class="jy-n">02 / 07 · Harvest</p>
-<p class="jy-t serif">Grown with care.<br>Harvested with patience.</p>
+<p class="jy-n">02 — Harvest</p>
+<p class="jy-t">Grown with care.<br>Harvested with patience.</p>
 
 </div>
 </div>
 
 <div class="jy-scene" data-i="2">
-<div class="jy-media">
-<img src="/assets/media/fiber.jpg" alt="" loading="lazy">
-
-
-</div>
+<div class="jy-media"><img src="/assets/media/story/s03.jpg" alt="" loading="lazy"></div>
 <div class="jy-copy">
-<p class="jy-n">03 / 07 · Fibre</p>
-<p class="jy-t serif">Fibre is cleaned<br>and prepared for spinning.</p>
+<p class="jy-n">03 — Fibre</p>
+<p class="jy-t">Fibre is cleaned<br>and prepared for spinning.</p>
 
 </div>
 </div>
 
 <div class="jy-scene" data-i="3">
-<div class="jy-media">
-<img src="/assets/media/yarn.jpg" alt="" loading="lazy">
-
-
-</div>
+<div class="jy-media"><img src="/assets/media/story/s04.jpg" alt="" loading="lazy"></div>
 <div class="jy-copy">
-<p class="jy-n">04 / 07 · Yarn</p>
-<p class="jy-t serif">Fibre becomes yarn.</p>
+<p class="jy-n">04 — Yarn</p>
+<p class="jy-t">Fibre becomes yarn.</p>
 
 </div>
 </div>
 
 <div class="jy-scene" data-i="4">
-<div class="jy-media jy-type">
-<span class="serif" aria-hidden="true">Fabric</span>
-
-</div>
+<div class="jy-media"><img src="/assets/media/story/s05.jpg" alt="" loading="lazy"></div>
 <div class="jy-copy">
-<p class="jy-n">05 / 07 · Fabric</p>
-<p class="jy-t serif">Yarn becomes fabric.</p>
+<p class="jy-n">05 — Fabric</p>
+<p class="jy-t">Yarn becomes fabric.</p>
 
 </div>
 </div>
 
 <div class="jy-scene" data-i="5">
-<div class="jy-media">
-<video data-src="/assets/media/stitch.mp4" poster="/assets/media/stitch-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
-
-
-</div>
+<div class="jy-media"><img src="/assets/media/story/s06.jpg" alt="" loading="lazy"></div>
 <div class="jy-copy">
-<p class="jy-n">06 / 07 · Production</p>
-<p class="jy-t serif">Fabric takes shape<br>for your brand.</p>
+<p class="jy-n">06 — Production</p>
+<p class="jy-t">Fabric takes shape<br>for your brand.</p>
 
 </div>
 </div>
 
 <div class="jy-scene" data-i="6">
-<div class="jy-media">
-<img src="/assets/media/baby-muslin-hero.jpg" alt="" loading="lazy">
-
-
-</div>
+<div class="jy-media"><img src="/assets/media/story/s07.jpg" alt="" loading="lazy"></div>
 <div class="jy-copy">
-<p class="jy-n">07 / 07 · Product</p>
-<p class="jy-t serif">From cotton to your brand.</p>
+<p class="jy-n">07 — Product</p>
+<p class="jy-t">From cotton to your brand.</p>
 <a href="#rfq" class="btn btn-paper jy-cta">Let’s talk about your project</a>
 </div>
 </div>
 
 <div class="jy-progress" aria-hidden="true"><span class="jy-count">01 / 07</span><span class="jy-bar"><i></i></span></div>
-<p class="jy-cue">Scroll ↓</p>
+<p class="jy-cue">Scroll</p>
 </div>
 </section>
 
