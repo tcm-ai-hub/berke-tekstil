@@ -16,7 +16,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script type="application/ld+json">{{ org_ld|safe }}</script>
 {% block head %}{% endblock %}
@@ -28,8 +28,8 @@
 <a class="logo" href="{{ home }}" aria-label="Berke Tekstil">BERKE <span>TEKSTİL</span></a>
 <nav class="nav" id="nav" aria-label="Main">
 <a href="{{ home }}#products"{% if is_product %} aria-current="page"{% endif %}>{{ L.nav.collections }}</a>
-<a href="{{ home }}#top">{{ L.nav.production }}</a>
-<a href="{{ home }}#about">{{ L.nav.about }}</a>
+<a href="{{ home }}#about">{{ L.nav.production }}</a>
+<a href="{{ home }}#top">{{ L.nav.about }}</a>
 <a href="#rfq">{{ L.nav.contact }}</a>
 <a href="#rfq" class="nav-talk-m">{{ L.nav.talk }}</a>
 </nav>

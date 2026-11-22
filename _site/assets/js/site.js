@@ -21,6 +21,26 @@
     if (ht) ht.addEventListener("click", function () { if (hv.paused) play(hv); else hv.pause(); });
   }
 
+  // opening film: auto-advancing scenes cotton → product
+  var fm = $("[data-film]");
+  if (fm) {
+    var fl = $$(".fs", fm), fc = $$(".fc", fm), fb = $(".film-bar i", fm), fi = 0, per = 3200, t0 = performance.now();
+    var show = function (i) {
+      fl.forEach(function (el, j) { var on = j === i; el.classList.toggle("on", on); if (el.tagName === "VIDEO") { if (on) { el.preload = "auto"; el.currentTime = 0; play(el); } else el.pause(); } });
+      fc.forEach(function (el, j) { el.classList.toggle("on", j === i); });
+    };
+    if (reduce) { show(0); }
+    else {
+      var tick = function (now) {
+        var p = (now - t0) / per;
+        if (p >= 1) { fi = (fi + 1) % fl.length; t0 = now; p = 0; show(fi); }
+        if (fb) fb.style.width = (((fi + p) / fl.length) * 100).toFixed(2) + "%";
+        requestAnimationFrame(tick);
+      };
+      show(0); requestAnimationFrame(tick);
+    }
+  }
+
   // scroll story: swap the sticky media as each chapter enters
   var st = $("[data-story]");
   if (st) {

@@ -487,3 +487,65 @@ story:
 story_ui:
   scroll: Scroll
   from: From cotton to product
+film:
+  loading: Preparing the opening film…
+  skip: Continue to site
+  scenes:
+  - - Cotton
+    - It all starts with a fibre.
+  - - Fibre
+    - Combed and refined.
+  - - Yarn
+    - Fibre becomes yarn.
+  - - Fabric
+    - Yarn becomes fabric.
+  - - Stock
+    - Chosen for your collection.
+  - - Sewing & embroidery
+    - Finished in our atelier.
+  - - Product
+    - Under your label.
+lux:
+  statement: From cotton to your brand.
+  tagline: Natural. Careful. Refined.
+  intro: Berke Tekstil makes textiles for brands in Denizli, Türkiye. We choose the fibre, yarn and fabric, make the sample, produce on your approval and deliver under your label.
+  facts_h: In Denizli, since 1995.
+  facts:
+  - - '1995'
+    - Experience rooted in Denizli textiles
+  - - '2015'
+    - Berke Tekstil
+  - - '5'
+    - Product groups, one partner
+  fibres_h: Fibre and texture
+  fibres_p: Every product starts with the right fabric. We choose it together for your collection and approve it with a sample.
+  fibres:
+  - - Cotton fibre
+    - Soft, breathable, kind to skin.
+    - fiber.jpg
+  - - Muslin
+    - Light and layered, a babywear essential.
+    - gauze.jpg
+  - - Terry
+    - Absorbent loops, a surface ready for embroidery.
+    - towel.jpg
+  - - Yarn
+    - A fabric’s hand lies in the fineness of its yarn.
+    - yarn.jpg
+  proof_e: Atelier
+  proof_h: Your signature, in thread.
+  proof_p: Logos, monograms and borders are stitched in our own atelier. Every piece meets the approved sample; we plan fabric to the pattern and put the gaps to use.
+  feat_e: Private label
+  feat_h: From idea to your door.
+  feat:
+  - A sample from your R&D file or sample product
+  - Fabric, trims and colour chosen together
+  - Embroidery, print and woven labels
+  - Your own labels and packaging
+  - Photo updates at every step
+  - Shipping with partner carriers
+  coll_e: Collections
+  coll_h: Five product groups.
+  close_h: Now it’s your design.
+  close_p: Send your R&D file, sketch or a sample product; we’ll make the sample as fast as possible. From Istanbul to Germany, we work with brands.
+  close_cta: Let’s talk about your project

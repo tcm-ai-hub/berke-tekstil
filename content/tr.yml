@@ -487,3 +487,65 @@ story:
 story_ui:
   scroll: Kaydırın
   from: Pamuktan ürüne
+film:
+  loading: Açılış filmi hazırlanıyor…
+  skip: Siteye geç
+  scenes:
+  - - Pamuk
+    - Her şey bir lifle başlar.
+  - - Lif
+    - Taranır, inceltilir.
+  - - İplik
+    - Lif, ipliğe dönüşür.
+  - - Kumaş
+    - İplik, kumaşa.
+  - - Depo
+    - Koleksiyonunuz için seçilir.
+  - - Dikiş ve nakış
+    - Atölyemizde işlenir.
+  - - Ürün
+    - Markanızın etiketiyle.
+lux:
+  statement: Pamuktan markanıza.
+  tagline: Doğal. Özenli. Zarif.
+  intro: Berke Tekstil, Denizli’de markalar için tekstil üretir. Lifi, ipliği ve kumaşı seçer; numuneyi çıkarır, onayınızla üretir ve markanızın etiketiyle teslim ederiz.
+  facts_h: Denizli’de, 1995’ten beri.
+  facts:
+  - - '1995'
+    - Denizli tekstilinde başlayan deneyim
+  - - '2015'
+    - Berke Tekstil
+  - - '5'
+    - Ürün grubu, tek üretim ortağı
+  fibres_h: Lif ve doku
+  fibres_p: Her ürün doğru kumaşla başlar. Koleksiyonunuz için kumaşı birlikte seçer, numuneyle onaylarız.
+  fibres:
+  - - Pamuk lifi
+    - Yumuşak, nefes alan, cilt dostu.
+    - fiber.jpg
+  - - Müslin
+    - Hafif, katmanlı, bebek tekstilinin vazgeçilmezi.
+    - gauze.jpg
+  - - Havlu
+    - Emici ilmekler, nakışa hazır yüzey.
+    - towel.jpg
+  - - İplik
+    - Kumaşın tutumu ipliğin inceliğinde saklıdır.
+    - yarn.jpg
+  proof_e: Atölye
+  proof_h: İmzanız, iplikle.
+  proof_p: Logo, monogram ve bordür kendi atölyemizde işlenir. Her parça onaylı numunenin standardında; kumaşı kalıba göre planlar, boşlukları değerlendiririz.
+  feat_e: Private label
+  feat_h: Fikirden kapınıza.
+  feat:
+  - Ar-Ge dosyanızdan ya da örnek ürününüzden numune
+  - Kumaş, aksesuar ve renk seçimi birlikte
+  - Nakış, baskı ve dokuma etiket
+  - Markanıza özel etiket ve ambalaj
+  - Her adımda fotoğraflı bilgilendirme
+  - Anlaşmalı kargo ile sevkiyat
+  coll_e: Koleksiyonlar
+  coll_h: Beş ürün grubu.
+  close_h: Sıra sizin tasarımınızda.
+  close_p: Ar-Ge dosyanızı, çiziminizi ya da örnek ürününüzü gönderin; numunesini en kısa sürede çıkaralım. İstanbul’dan Almanya’ya, markalarla çalışıyoruz.
+  close_cta: Projenizi konuşalım
